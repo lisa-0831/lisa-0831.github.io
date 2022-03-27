@@ -1,0 +1,74 @@
+header{
+    background-color: rgb(237, 231, 231);
+    width: 100vw;
+    margin: -8px auto;
+    display: inline-flex;
+}
+
+.logo-container{
+    display: flex;
+    flex: 1;
+    padding: 0px 0px 0px 15px;
+}
+
+.menu-items{
+    display: inline-flex;
+    list-style: none;
+}
+
+.menu-item{
+    padding: 0px 30px 0px 0px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.intro-text{
+    background-color: rgb(137, 185, 205);
+    width: 100vw;
+    line-height: 300px;
+    margin: -45px auto;
+    text-align: center;
+    font-size: 42px;
+}
+
+.content-text{
+    text-align: center;
+}
+
+.content-box{
+    background-color: rgb(20, 98, 140);
+    width: 600px;
+    height: 300px;
+    margin: 30px;
+    text-align: center;
+}
+
+.first-content-boxes,
+.second-content-boxes{
+    display: inline-flex;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 600px;
+}
+
+.content{
+    text-align: center;
+}
+
+.btn{
+    text-align: center;
+    margin: 0px auto;
+}
+
+.cta-btn{
+    text-align: center;
+    background: rgb(172, 214, 232);
+    cursor: pointer;
+	width: 150px;
+	height: 50px;
+	font-size: 16px;
+	border: none;
+}
+
+
+
