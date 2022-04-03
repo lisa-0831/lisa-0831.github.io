@@ -43,16 +43,20 @@ header{
     text-align: center;
 }
 
-.first-content-boxes,
-.second-content-boxes{
+.content-boxes{
     display: inline-flex;
     width: 90%;
     max-width: 1200px;
     max-height: 600px;
 }
 
-.content{
+#content{
     text-align: center;
+}
+
+#hidden-content{
+    text-align: center;
+    display: none;
 }
 
 .btn{

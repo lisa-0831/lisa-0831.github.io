@@ -3,7 +3,8 @@
 
 <head>
     <title>About PEI-WEN</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/eventHandling.js"></script>
 </head>
 
 <body>
@@ -22,22 +23,33 @@
 
     <main>
         <section class="intro-text">
-            <h1>Hello World!</h1>
+            <h1 onclick="changeText(this)">Welcome Message</h1>
         </section>
-        <section class="content">
+        <section id="content">
             <h2 class="content-text">Section Title</h2>
-            <div class="first-content-boxes">
+            <div class="content-boxes">
                 <h3 class="content-box">Content Box 1</h3>
                 <h3 class="content-box">Content Box 2</h3>
             </div>
-            <div class="second-content-boxes">
+            <div class="content-boxes">
                 <h3 class="content-box">Content Box 3</h3>
                 <h3 class="content-box">Content Box 4</h3>
             </div>
         </section>
         <section class="btn">
-            <button class="cta-btn">Call to Action</button>
+            <button class="cta-btn" onclick="showDiv()">Call to Action</button>
         </section>
+        <section id="hidden-content">
+            <div class="content-boxes">
+                <h3 class="content-box">Content Box 5</h3>
+                <h3 class="content-box">Content Box 6</h3>
+            </div>
+            <div class="content-boxes">
+                <h3 class="content-box">Content Box 7</h3>
+                <h3 class="content-box">Content Box 8</h3>
+            </div>
+        </section>
+
     </main>
 
 </body>
