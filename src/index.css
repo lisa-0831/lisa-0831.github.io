@@ -428,22 +428,28 @@ nav {
   letter-spacing: -1.5px;
 }
 
-.project-copy h3 a {
-  transition: color 180ms ease;
+.project-title-link {
+  position: relative;
+  display: inline-block;
 }
 
-.project-copy h3 a:hover {
-  color: #7351d7;
+.project-title-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  left: 0;
+  height: 1px;
+  background: #7351d7;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 220ms ease;
 }
 
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #7351d7;
-  font-family: "Inter:Medium";
-  font-size: 13px;
-  font-weight: 500;
+.project-title-link:hover::after,
+.project-title-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .project-copy h4 {
@@ -482,6 +488,26 @@ nav {
   padding: 8px 13px;
   color: #62646a;
   font-size: 12px;
+}
+
+.project-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #dadbdd;
+  padding-bottom: 7px;
+  color: #17191c;
+  font-family: "Inter:Medium";
+  font-size: 12px;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.project-github:hover,
+.project-github:focus-visible {
+  border-color: #7351d7;
+  color: #7351d7;
 }
 
 .projects .rule,
@@ -620,6 +646,561 @@ nav {
   font-weight: 400;
 }
 
+.travel-portal {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.72fr);
+  align-items: center;
+  gap: clamp(64px, 8vw, 130px);
+  overflow: hidden;
+  border-radius: 80px 0 0 0;
+  background: #17191c;
+  padding-block: 88px;
+  color: white;
+}
+
+.travel-portal-copy {
+  display: flex;
+  max-width: 680px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+}
+
+.travel-portal h2 {
+  font-size: clamp(42px, 4.1vw, 59px);
+  font-weight: 400;
+  letter-spacing: -2.6px;
+  line-height: 1.1;
+}
+
+.travel-portal-copy > p {
+  max-width: 520px;
+  color: #b2b3ba;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.travel-button {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  gap: 25px;
+  border-radius: 100px;
+  background: #eeebf6;
+  padding: 0 17px 0 22px;
+  color: #17191c;
+  font-family: "Inter:Medium";
+  font-size: 13px;
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.travel-button:hover {
+  transform: translateY(-2px);
+  background: white;
+}
+
+.travel-preview {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #4d4e55;
+  border-radius: 24px;
+  background: #202226;
+  padding: 28px;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease;
+}
+
+.travel-preview:hover {
+  transform: translateY(-5px);
+  border-color: #b7a1ff;
+}
+
+.preview-meta,
+.preview-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preview-meta {
+  color: #b2b3ba;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.preview-tiles {
+  display: grid;
+  max-width: 300px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  align-self: center;
+  transform: rotate(-4deg);
+}
+
+.preview-tiles i {
+  width: 50px;
+  height: 38px;
+  border: 1px solid #565860;
+  border-radius: 8px;
+  background: #2b2d32;
+}
+
+.preview-tiles i.filled {
+  border-color: #b7a1ff;
+  background: #7351d7;
+  box-shadow: 0 8px 24px rgb(115 81 215 / 22%);
+}
+
+.preview-footer {
+  font-size: 16px;
+}
+
+.preview-arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #7351d7;
+  font-size: 20px;
+}
+
+.travel-screen {
+  min-height: 100dvh;
+  background: #fafaf8;
+}
+
+.travel-nav {
+  display: flex;
+  height: 104px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dadbdd;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #62646a;
+  font-size: 13px;
+  transition: color 180ms ease;
+}
+
+.back-link:hover {
+  color: #7351d7;
+}
+
+.travel-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  align-items: end;
+  gap: 80px;
+  padding-block: 82px 66px;
+}
+
+.travel-header > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.travel-header h1 {
+  font-size: clamp(54px, 5.7vw, 82px);
+  font-weight: 400;
+  letter-spacing: -4.5px;
+  line-height: 1.04;
+}
+
+.demo-notice {
+  border-top: 1px solid #dadbdd;
+  padding-top: 18px;
+}
+
+.demo-notice span {
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 100px;
+  background: #e4def8;
+  padding: 7px 10px;
+  color: #7351d7;
+  font-family: "Inter:Medium";
+  font-size: 10px;
+  letter-spacing: 1.1px;
+}
+
+.demo-notice p {
+  color: #62646a;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.travel-gallery {
+  padding-block: 82px;
+}
+
+.gallery-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #dadbdd;
+  padding-block: 18px 28px;
+  color: #62646a;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.gallery-heading p {
+  max-width: 420px;
+  font-size: 11px;
+  letter-spacing: 0;
+  line-height: 1.55;
+  text-align: right;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(210px, 0.7fr) minmax(210px, 0.7fr);
+  gap: 14px;
+  animation: gallery-reveal 300ms ease-out;
+}
+
+.gallery-card {
+  min-width: 0;
+}
+
+.gallery-image {
+  position: relative;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #eeebf6;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(0.94);
+  transition:
+    transform 500ms ease,
+    filter 300ms ease;
+}
+
+.gallery-card:hover .gallery-image img {
+  transform: scale(1.025);
+  filter: saturate(0.9) contrast(0.97);
+}
+
+.gallery-image > span {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(250 250 248 / 88%);
+  color: #17191c;
+  font-size: 10px;
+  backdrop-filter: blur(8px);
+}
+
+.gallery-card figcaption {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 12px;
+  color: #62646a;
+  font-size: 9px;
+}
+
+.gallery-card figcaption > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gallery-card figcaption strong {
+  color: #17191c;
+  font-family: "Inter:Medium";
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.gallery-card figcaption > span {
+  padding-top: 1px;
+  text-align: right;
+}
+
+.gallery-empty {
+  display: flex;
+  min-height: 300px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border: 1px solid #dadbdd;
+  border-radius: 18px;
+  background: #f5f3f8;
+  color: #62646a;
+}
+
+.gallery-empty > span {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  place-items: center;
+  border: 1px solid #d0c9df;
+  border-radius: 13px;
+  background: #fafaf8;
+  color: #8b8990;
+  font-family: "Inter:Medium";
+  font-size: 13px;
+}
+
+.gallery-empty > div {
+  max-width: 380px;
+}
+
+.gallery-empty h2 {
+  margin-bottom: 10px;
+  color: #17191c;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+
+.gallery-empty p {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@keyframes gallery-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.map-section {
+  border-radius: 88px 0 88px 0;
+  background: #eeebf6;
+  padding-block: 42px 58px;
+}
+
+.map-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d3cde2;
+  padding-bottom: 26px;
+  color: #62646a;
+  font-size: 11px;
+}
+
+.map-legend {
+  display: flex;
+  gap: 24px;
+}
+
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #d0c9df;
+  border-radius: 4px;
+  background: #f7f5fb;
+}
+
+.legend-swatch.visited {
+  border-color: #7351d7;
+  background: #7351d7;
+}
+
+.map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 56px;
+  padding-top: 48px;
+}
+
+.map-scroll {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  overflow-x: auto;
+  padding: 12px 4px 22px;
+  scrollbar-color: #b7a1ff transparent;
+  scrollbar-width: thin;
+}
+
+.state-map {
+  display: grid;
+  width: max-content;
+  min-width: max-content;
+  grid-template-columns: repeat(13, 48px);
+  grid-template-rows: repeat(7, 48px);
+  gap: 8px;
+  margin: auto;
+}
+
+.state-tile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d0c9df;
+  border-radius: 9px;
+  background: #f7f5fb;
+  color: #8b8990;
+  cursor: pointer;
+  font-family: "Inter:Medium";
+  font-size: 11px;
+  font-weight: 500;
+  transition:
+    transform 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.state-tile:hover {
+  z-index: 2;
+  transform: translateY(-3px);
+  border-color: #9e86ea;
+  color: #7351d7;
+}
+
+.state-tile.is-visited {
+  border-color: #7351d7;
+  background: #7351d7;
+  color: white;
+}
+
+.state-tile.is-visited:hover {
+  background: #6543cf;
+  color: white;
+}
+
+.state-tile.is-selected {
+  z-index: 3;
+  outline: 3px solid #fafaf8;
+  box-shadow: 0 0 0 5px #b7a1ff;
+}
+
+.state-tile:focus-visible {
+  z-index: 3;
+  outline: 3px solid #17191c;
+  outline-offset: 2px;
+}
+
+.state-detail {
+  display: flex;
+  min-height: 370px;
+  flex-direction: column;
+  border-radius: 20px;
+  background: #17191c;
+  padding: 28px;
+  color: white;
+}
+
+.state-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 52px;
+}
+
+.state-detail-top > span:first-child {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #4b4c52;
+  border-radius: 10px;
+  font-family: "Inter:Medium";
+  font-size: 13px;
+}
+
+.state-detail-top > span:last-child {
+  color: #8e9097;
+  font-size: 10px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.state-detail-top > span.status-visited {
+  color: #b7a1ff;
+}
+
+.detail-label {
+  margin-bottom: 8px;
+  color: #8e9097;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.state-detail h2 {
+  margin-bottom: 30px;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -1.2px;
+}
+
+.trip-date strong {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.trip-note {
+  margin-top: 22px;
+  color: #b2b3ba;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.sample-tag {
+  margin-top: auto;
+  padding-top: 30px;
+  color: #777980;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.travel-footnote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 42px;
+  color: #62646a;
+  font-size: 12px;
+}
+
+.travel-footnote p {
+  max-width: 480px;
+  text-align: right;
+  line-height: 1.6;
+}
+
 .contact {
   padding-block: 80px 30px;
 }
@@ -706,6 +1287,18 @@ footer span:first-child {
   .journey-layout,
   .foundation-layout {
     gap: 56px;
+  }
+
+  .travel-portal {
+    gap: 56px;
+  }
+
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .state-detail {
+    min-height: 330px;
   }
 }
 
@@ -805,6 +1398,72 @@ footer span:first-child {
     padding-block: 72px;
   }
 
+  .travel-portal {
+    grid-template-columns: 1fr;
+    border-radius: 54px 0 0 0;
+    padding-block: 72px;
+  }
+
+  .travel-preview {
+    min-height: 340px;
+  }
+
+  .travel-nav {
+    height: 82px;
+  }
+
+  .travel-header {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-block: 64px 52px;
+  }
+
+  .travel-header h1 {
+    font-size: clamp(48px, 13vw, 70px);
+    letter-spacing: -3.5px;
+  }
+
+  .travel-gallery {
+    padding-block: 64px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1.25fr 0.75fr;
+  }
+
+  .gallery-card-1 {
+    grid-row: span 2;
+  }
+
+  .gallery-card-1 .gallery-image {
+    height: 560px;
+  }
+
+  .gallery-card-2 .gallery-image,
+  .gallery-card-3 .gallery-image {
+    height: 245px;
+  }
+
+  .map-section {
+    border-radius: 54px 0 54px 0;
+  }
+
+  .map-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .travel-footnote {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .travel-footnote p {
+    text-align: left;
+  }
+
   .journey-item {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -848,6 +1507,74 @@ footer span:first-child {
     font-size: 36px;
   }
 
+  .travel-portal h2 {
+    font-size: 39px;
+    letter-spacing: -2px;
+  }
+
+  .travel-preview {
+    min-height: 300px;
+    padding: 22px;
+  }
+
+  .preview-tiles i {
+    width: 42px;
+    height: 32px;
+  }
+
+  .travel-nav .identity > span:last-child {
+    display: none;
+  }
+
+  .gallery-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .gallery-heading p {
+    text-align: left;
+  }
+
+  .gallery-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gallery-card {
+    width: 82vw;
+    min-width: 82vw;
+    scroll-snap-align: start;
+  }
+
+  .gallery-card .gallery-image,
+  .gallery-card-1 .gallery-image,
+  .gallery-card-2 .gallery-image,
+  .gallery-card-3 .gallery-image {
+    height: 410px;
+  }
+
+  .gallery-empty {
+    min-height: 340px;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 28px;
+  }
+
+  .back-link {
+    font-size: 12px;
+  }
+
+  .map-legend {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .state-detail {
+    min-height: 350px;
+  }
+
   .tool-row {
     grid-template-columns: 1fr;
     gap: 4px;
@@ -872,8 +1599,20 @@ footer span:first-child {
     scroll-behavior: auto;
   }
 
-  .primary-button,
-  .project-copy h3 a {
+  .primary-button {
     transition: none;
+  }
+
+  .travel-button,
+  .travel-preview,
+  .state-tile,
+  .gallery-image img,
+  .project-title-link::after,
+  .project-github {
+    transition: none;
+  }
+
+  .gallery-grid {
+    animation: none;
   }
 }

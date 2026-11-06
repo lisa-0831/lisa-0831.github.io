@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const asset = (name: string) => `/assets/${name}`;
 
 function Arrow({ large = false }: { large?: boolean }) {
@@ -96,7 +98,442 @@ const journeys = [
   },
 ];
 
+const stateTiles = [
+  ["AK", "Alaska", 1, 1],
+  ["VT", "Vermont", 1, 11],
+  ["NH", "New Hampshire", 1, 12],
+  ["ME", "Maine", 1, 13],
+  ["WA", "Washington", 2, 2],
+  ["ID", "Idaho", 2, 3],
+  ["MT", "Montana", 2, 4],
+  ["ND", "North Dakota", 2, 5],
+  ["MN", "Minnesota", 2, 6],
+  ["WI", "Wisconsin", 2, 7],
+  ["MI", "Michigan", 2, 8],
+  ["NY", "New York", 2, 11],
+  ["MA", "Massachusetts", 2, 12],
+  ["OR", "Oregon", 3, 2],
+  ["NV", "Nevada", 3, 3],
+  ["WY", "Wyoming", 3, 4],
+  ["SD", "South Dakota", 3, 5],
+  ["IA", "Iowa", 3, 6],
+  ["IL", "Illinois", 3, 7],
+  ["IN", "Indiana", 3, 8],
+  ["OH", "Ohio", 3, 9],
+  ["PA", "Pennsylvania", 3, 10],
+  ["NJ", "New Jersey", 3, 11],
+  ["CT", "Connecticut", 3, 12],
+  ["RI", "Rhode Island", 3, 13],
+  ["CA", "California", 4, 2],
+  ["UT", "Utah", 4, 3],
+  ["CO", "Colorado", 4, 4],
+  ["NE", "Nebraska", 4, 5],
+  ["MO", "Missouri", 4, 6],
+  ["KY", "Kentucky", 4, 7],
+  ["WV", "West Virginia", 4, 8],
+  ["VA", "Virginia", 4, 9],
+  ["MD", "Maryland", 4, 10],
+  ["DE", "Delaware", 4, 11],
+  ["AZ", "Arizona", 5, 3],
+  ["NM", "New Mexico", 5, 4],
+  ["KS", "Kansas", 5, 5],
+  ["AR", "Arkansas", 5, 6],
+  ["TN", "Tennessee", 5, 7],
+  ["NC", "North Carolina", 5, 9],
+  ["DC", "District of Columbia", 5, 10],
+  ["OK", "Oklahoma", 6, 5],
+  ["LA", "Louisiana", 6, 6],
+  ["MS", "Mississippi", 6, 7],
+  ["AL", "Alabama", 6, 8],
+  ["GA", "Georgia", 6, 9],
+  ["SC", "South Carolina", 6, 10],
+  ["HI", "Hawaii", 7, 1],
+  ["TX", "Texas", 7, 5],
+  ["FL", "Florida", 7, 9],
+] as const;
+
+const demoTrips: Record<string, { date: string; note: string }> = {
+  CA: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+  NY: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+  MA: {
+    date: "Date to be added",
+    note: "Visited Boston. Personal travel dates and notes will be added later.",
+  },
+  GA: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+  NJ: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+  TN: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+  NC: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+  DC: {
+    date: "Date to be added",
+    note: "Visited. Personal travel dates and notes will be added later.",
+  },
+};
+
+type DemoPhoto = {
+  caption: string;
+  credit: string;
+  url: string;
+  alt: string;
+};
+
+const demoPhotos: Record<string, DemoPhoto[]> = {
+  CA: [
+    {
+      caption: "Pacific coast / sample photo",
+      credit: "Craig Melville",
+      url: "/travel/states/CA/01.jpg",
+      alt: "Rocky California mountain beside the Pacific Ocean",
+    },
+    {
+      caption: "Coastal road / sample photo",
+      credit: "Craig Melville",
+      url: "/travel/states/CA/02.jpg",
+      alt: "Brown cliffs beside the sea on the California coast",
+    },
+    {
+      caption: "Mountain lake / sample photo",
+      credit: "Ganapathy Kumar",
+      url: "/travel/states/CA/03.jpg",
+      alt: "Gray and brown mountains beside a California lake",
+    },
+  ],
+  NY: [
+    {
+      caption: "Brooklyn Bridge / sample photo",
+      credit: "Patrick Tomasso",
+      url: "/travel/states/NY/01.jpg",
+      alt: "Manhattan skyline and Brooklyn Bridge over the East River",
+    },
+    {
+      caption: "A yellow cab / sample photo",
+      credit: "Robert Bye",
+      url: "/travel/states/NY/02.jpg",
+      alt: "A yellow taxi driving between tall New York buildings",
+    },
+    {
+      caption: "Downtown light / sample photo",
+      credit: "Andrea Cau",
+      url: "/travel/states/NY/03.jpg",
+      alt: "A pathway between high-rise buildings in New York",
+    },
+  ],
+  MA: [
+    {
+      caption: "Brick and green / sample photo",
+      credit: "Matt Collamer",
+      url: "/travel/states/MA/01.jpg",
+      alt: "A historic brick building surrounded by trees in Boston",
+    },
+    {
+      caption: "Beacon Hill / sample photo",
+      credit: "Amanda Murphy",
+      url: "/travel/states/MA/02.jpg",
+      alt: "A cobblestone Boston street lined with brick buildings",
+    },
+    {
+      caption: "A walk through Boston / sample photo",
+      credit: "Asael Peña",
+      url: "/travel/states/MA/03.jpg",
+      alt: "People walking through a tree-lined place in Boston",
+    },
+  ],
+  GA: [
+    {
+      caption: "Savannah oaks / sample photo",
+      credit: "Ryan Arnst",
+      url: "/travel/states/GA/01.jpg",
+      alt: "A road passing beneath green trees in Savannah, Georgia",
+    },
+    {
+      caption: "Atlanta skyline / sample photo",
+      credit: "Lance Asper",
+      url: "/travel/states/GA/02.jpg",
+      alt: "The Atlanta skyline during daytime",
+    },
+    {
+      caption: "Historic streets / sample photo",
+      credit: "Jonah Townsley",
+      url: "/travel/states/GA/03.jpg",
+      alt: "A Savannah street with moss-draped trees and historic buildings",
+    },
+  ],
+  TN: [
+    {
+      caption: "Cumberland River / sample photo",
+      credit: "King of Hearts",
+      url: "/travel/states/TN/01.jpg",
+      alt: "Nashville skyline reflected in the Cumberland River",
+    },
+    {
+      caption: "Smoky overlook / sample photo",
+      credit: "Shadowmeld Photography",
+      url: "/travel/states/TN/02.jpg",
+      alt: "Forested ridges of the Great Smoky Mountains under a cloudy sky",
+    },
+    {
+      caption: "Broadway / sample photo",
+      credit: "Antony-22",
+      url: "/travel/states/TN/03.jpg",
+      alt: "People walking along Broadway in downtown Nashville",
+    },
+  ],
+  NC: [
+    {
+      caption: "Biltmore / sample photo",
+      credit: "Blake Lewis",
+      url: "/travel/states/NC/01.jpg",
+      alt: "The Biltmore Estate and its lawn in Asheville, North Carolina",
+    },
+    {
+      caption: "Cape Hatteras / sample photo",
+      credit: "Bohemian Baltimore",
+      url: "/travel/states/NC/02.jpg",
+      alt: "The black and white spiral of the Cape Hatteras Lighthouse",
+    },
+    {
+      caption: "Blue Ridge road / sample photo",
+      credit: "Maria newengland",
+      url: "/travel/states/NC/03.jpg",
+      alt: "A stone tunnel on the Blue Ridge Parkway in North Carolina",
+    },
+  ],
+  DC: [
+    {
+      caption: "Reflecting Pool / sample photo",
+      credit: "Ali Khan",
+      url: "/travel/states/DC/01.jpg",
+      alt: "The Washington Monument reflected in the Lincoln Memorial Reflecting Pool",
+    },
+    {
+      caption: "Cherry blossoms / sample photo",
+      credit: "Kurt Kaiser",
+      url: "/travel/states/DC/02.jpg",
+      alt: "Cherry blossoms in front of the Washington Monument",
+    },
+    {
+      caption: "The Capitol / sample photo",
+      credit: "Martin Falbisoner",
+      url: "/travel/states/DC/03.jpg",
+      alt: "The west front of the United States Capitol",
+    },
+  ],
+  NJ: [
+    {
+      caption: "Cape May light / sample photo",
+      credit: "King of Hearts",
+      url: "/travel/states/NJ/01.jpg",
+      alt: "Cape May Lighthouse at sunset behind beach grass",
+    },
+    {
+      caption: "Asbury Park / sample photo",
+      credit: "Acroterion",
+      url: "/travel/states/NJ/02.jpg",
+      alt: "The brick Paramount Theatre and Convention Hall in Asbury Park",
+    },
+    {
+      caption: "Across the river / sample photo",
+      credit: "King of Hearts",
+      url: "/travel/states/NJ/03.jpg",
+      alt: "The Manhattan skyline at dusk seen from the Jersey City waterfront",
+    },
+  ],
+};
+
+function TravelScreen() {
+  const [selected, setSelected] = useState("NY");
+  const selectedState = stateTiles.find(([code]) => code === selected)!;
+  const trip = demoTrips[selected];
+  const selectedPhotos = demoPhotos[selected] ?? [];
+
+  return (
+    <main className="travel-screen">
+      <nav className="travel-nav page-pad" aria-label="Travel map navigation">
+        <a className="identity" href="#life" aria-label="Back to portfolio">
+          <strong>LW.</strong>
+          <span className="identity-rule" />
+          <span>States &amp; stories</span>
+        </a>
+        <a className="back-link" href="#life">
+          <span aria-hidden="true">←</span> Back to portfolio
+        </a>
+      </nav>
+
+      <header className="travel-header page-pad">
+        <div>
+          <Label>Beyond the work</Label>
+          <h1>
+            A map of places
+            <br />
+            and small moments.
+          </h1>
+        </div>
+        <div className="demo-notice">
+          <span>TRAVEL RECORD SETUP</span>
+          <p>
+            Visited states reflect the current travel list. Dates and personal stories can be added
+            later; gallery images are temporary samples.
+          </p>
+        </div>
+      </header>
+
+      <section className="map-section page-pad" aria-label="Interactive United States travel map">
+        <div className="map-toolbar">
+          <div className="map-legend" aria-label="Map legend">
+            <span>
+              <i className="legend-swatch visited" /> Visited
+            </span>
+            <span>
+              <i className="legend-swatch" /> Not visited
+            </span>
+          </div>
+          <p>{Object.keys(demoTrips).length} of 50 States + D.C. visited</p>
+        </div>
+
+        <div className="map-layout">
+          <div className="map-scroll">
+            <div className="state-map">
+              {stateTiles.map(([code, name, row, column]) => {
+                const visited = Boolean(demoTrips[code]);
+                return (
+                  <button
+                    className={`state-tile ${visited ? "is-visited" : ""} ${
+                      selected === code ? "is-selected" : ""
+                    }`}
+                    style={{ gridRow: row, gridColumn: column }}
+                    key={code}
+                    type="button"
+                    aria-label={`${name}, ${visited ? "visited in demo data" : "not visited"}`}
+                    aria-pressed={selected === code}
+                    onClick={() => setSelected(code)}
+                  >
+                    <span>{code}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <aside className="state-detail" aria-live="polite">
+            <div className="state-detail-top">
+              <span>{selected}</span>
+              <span className={trip ? "status-visited" : ""}>
+                {trip ? "Visited" : "Not visited"}
+              </span>
+            </div>
+            <div>
+              <p className="detail-label">
+                {selected === "DC" ? "Selected district" : "Selected state"}
+              </p>
+              <h2>{selectedState[1]}</h2>
+            </div>
+            {trip ? (
+              <>
+                <div className="trip-date">
+                  <p className="detail-label">Travel time</p>
+                  <strong>{trip.date}</strong>
+                </div>
+                <p className="trip-note">{trip.note}</p>
+              </>
+            ) : (
+              <p className="trip-note">
+                No sample trip is recorded for this state yet. Select a darker purple state to see a
+                demo travel date and note.
+              </p>
+            )}
+            <div className="sample-tag">
+              {trip ? "PERSONAL DATE & NOTE TO BE ADDED" : "NO VISIT RECORDED"}
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="travel-gallery page-pad" aria-label="Sample travel photo gallery">
+        <div className="gallery-heading">
+          <span>{selectedState[1]} / PHOTO NOTES / DEMO</span>
+          <p>
+            {selectedPhotos.length
+              ? `Sample imagery for ${selectedState[1]}—personal travel photos can replace these later.`
+              : `No sample photos for ${selectedState[1]} yet.`}
+          </p>
+        </div>
+        {selectedPhotos.length ? (
+          <div className="gallery-grid" key={selected}>
+            {selectedPhotos.map((item, index) => (
+              <figure className={`gallery-card gallery-card-${index + 1}`} key={item.url}>
+                <div className="gallery-image">
+                  <img src={item.url} alt={item.alt} loading="lazy" />
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
+                <figcaption>
+                  <div>
+                    <strong>{selectedState[1]}</strong>
+                    <span>{item.caption}</span>
+                  </div>
+                  <span>Photo · {item.credit}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        ) : (
+          <div className="gallery-empty">
+            <span>{selected}</span>
+            <div>
+              <h2>No photos here yet.</h2>
+              <p>
+                {trip
+                  ? `Personal travel photos for ${selectedState[1]} can be added later.`
+                  : "This state is not marked as visited. Choose a dark purple state to preview its sample photo set."}
+              </p>
+            </div>
+          </div>
+        )}
+      </section>
+
+      <section className="travel-footnote page-pad">
+        <span>50 States + D.C.</span>
+        <p>
+          A lighter corner of the portfolio—built to hold dates, memories, and the places still
+          ahead.
+        </p>
+      </section>
+    </main>
+  );
+}
+
 export default function App() {
+  const [isTravelScreen, setIsTravelScreen] = useState(() => window.location.hash === "#travel");
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const travel = window.location.hash === "#travel";
+      setIsTravelScreen(travel);
+      if (travel) window.scrollTo({ top: 0, behavior: "auto" });
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  if (isTravelScreen) return <TravelScreen />;
+
   return (
     <main>
       <section className="intro page-pad">
@@ -213,6 +650,7 @@ export default function App() {
             <div>
               <h3>
                 <a
+                  className="project-title-link"
                   href="https://github.com/lisa-0831/unicorn-ll#unicorn-ll--ai-assisted-hospitality-operations"
                   target="_blank"
                   rel="noreferrer"
@@ -241,13 +679,12 @@ export default function App() {
             </div>
             <Tags items={["Next.js / React", "Koa.js", "FastAPI"]} />
             <a
-              className="project-link"
+              className="project-github"
               href="https://github.com/lisa-0831/unicorn-ll"
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
-              <Arrow />
+              GitHub <Arrow />
             </a>
           </div>
         </article>
@@ -260,6 +697,7 @@ export default function App() {
             <div>
               <h3>
                 <a
+                  className="project-title-link"
                   href="https://github.com/lisa-0831/Online-Learning-Platform#pi-course"
                   target="_blank"
                   rel="noreferrer"
@@ -283,13 +721,12 @@ export default function App() {
             </div>
             <Tags items={["Recommendations", "WebSocket", "WebRTC"]} />
             <a
-              className="project-link"
+              className="project-github"
               href="https://github.com/lisa-0831/Online-Learning-Platform"
               target="_blank"
               rel="noreferrer"
             >
-              GitHub
-              <Arrow />
+              GitHub <Arrow />
             </a>
           </div>
           <Artwork
@@ -368,6 +805,39 @@ export default function App() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section id="life" className="travel-portal page-pad">
+        <div className="travel-portal-copy">
+          <Label light>Beyond the work</Label>
+          <h2>
+            There’s more to a life
+            <br />
+            than a résumé.
+          </h2>
+          <p>
+            A lighter collection of places, dates, and memories—starting with an interactive map of
+            the states and D.C. I’ve explored.
+          </p>
+          <a className="travel-button" href="#travel">
+            Open the travel map <Arrow />
+          </a>
+        </div>
+        <a className="travel-preview" href="#travel" aria-label="Open interactive travel map">
+          <div className="preview-meta">
+            <span>USA / 50 States + D.C.</span>
+            <span>Interactive journal</span>
+          </div>
+          <div className="preview-tiles" aria-hidden="true">
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((tile) => (
+              <i className={tile === 2 || tile === 5 || tile === 9 ? "filled" : ""} key={tile} />
+            ))}
+          </div>
+          <div className="preview-footer">
+            <span>Places visited</span>
+            <span className="preview-arrow">↗</span>
+          </div>
+        </a>
       </section>
 
       <section id="contact" className="contact page-pad">
