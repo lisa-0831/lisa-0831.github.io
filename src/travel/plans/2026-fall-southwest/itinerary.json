@@ -1,0 +1,494 @@
+[
+  {
+    "date": "11/20",
+    "day": "FRI",
+    "num": "01",
+    "title": "22:45 抵達 Las Vegas｜JetBlue 711，Jason 接機",
+    "region": "NEW YORK → LAS VEGAS",
+    "stay": "Atwell Suites Henderson by IHG",
+    "reference": "JetBlue Flight 711，22:45 到 LAS。Jason 接到 Henderson 的 Atwell Suites（150 S Water St），今晚不開夜車",
+    "events": [
+      [
+        "19:50（JFK）",
+        "JetBlue Flight 711 起飛",
+        "JFK Terminal 5；直飛 LAS，約 5 小時 55 分"
+      ],
+      [
+        "22:45（LAS）",
+        "Flight 711 抵達 Harry Reid",
+        "當地時間，領取行李。目前未知 LAS 抵達航廈，Jason 到時查 JetBlue Flight 711 的當日抵達門"
+      ],
+      [
+        "大夥兒飛行中",
+        "Jason 已從 Atlanta 抵達 Las Vegas",
+        "TODO: 大家確定隔天早餐吃什麼，Jason 可以先幫大家買"
+      ],
+      [
+        "抵達後",
+        "Jason 接機，送到 Atwell Suites",
+        "150 S Water St, Henderson。在 Henderson 市區，不是 Strip；Jason 需確認已取好租車，並在接機前買好隔日早餐、加滿油"
+      ],
+      [
+        "晚上",
+        "儘快休息、準備隔天出發",
+        "不排任何表演、不往 Grand Canyon 開夜車"
+      ]
+    ],
+    "points": [
+      "Harry Reid International Airport, Las Vegas, NV",
+      "Atwell Suites Henderson, 150 S Water St, Henderson, NV 89015"
+    ],
+    "nonDrive": []
+  },
+  {
+    "date": "11/21",
+    "day": "SAT",
+    "num": "02",
+    "title": "South Kaibab → Ooh Aah Point｜夕陽後住 US-89",
+    "region": "HENDERSON → GRAND CANYON",
+    "stay": "Stargazer Tiny Home，Grand Canyon Oasis",
+    "reference": "06:00 Nevada 出發。Las Vegas 到 South Rim 約 4h20 純駕駛再加休息，Henderson 出發時間接近，不是即時 Google。到 Arizona 時鐘快 1 小時。晚上住 Grand Canyon Oasis",
+    "events": [
+      [
+        "06:00（Nevada PST）",
+        "從 Atwell Suites Henderson 發車",
+        "150 S Water St。當地 06:00 等於 Arizona 07:00"
+      ],
+      [
+        "約 11:30–12:15（Arizona MST）",
+        "Grand Canyon Visitor Center 停車、午餐",
+        "含一次休息的估計。車停在 Visitor Center，不要開去 South Kaibab Trailhead"
+      ],
+      [
+        "12:15–12:45",
+        "Orange Route 東行到 South Kaibab",
+        "NPS：9/12–11/30 有接駁車，Visitor Center 直達登山口約 9 分鐘，9:00 後約每 15 分鐘。週末可能排隊"
+      ],
+      [
+        "12:45–14:45",
+        "South Kaibab → Ooh Aah Point → 原路返回",
+        "1.8 miles 往返，下降約 600 ft，回程要爬上。中等。健行約 1.5h，預留 2h 含拍照。步道沒有飲水。結冰或太慢就提早折返"
+      ],
+      [
+        "14:45–15:30",
+        "Orange Route 回 Visitor Center",
+        "休息、補水。不要這時才開始下切"
+      ],
+      [
+        "15:30–17:20",
+        "Mather Point 或 Yavapai 看夕陽",
+        "日落約 17:16 MST。這兩個點就在 Visitor Center 這一側。Hopi Point 要再搭 Red Route，人多時可能趕不上，改為 optional"
+      ],
+      [
+        "晚上",
+        "Stargazer Tiny Home 入住",
+        "28272 N US-89。東線若開放，經 Desert View 上 US-89；關閉就從 Tusayan 南下再繞 Flagstaff 北，夜路更長"
+      ]
+    ],
+    "points": [
+      "Atwell Suites Henderson, 150 S Water St, Henderson, NV 89015",
+      "Grand Canyon Visitor Center, Grand Canyon Village, AZ",
+      "Grand Canyon Oasis, 28272 N US Highway 89, Flagstaff, AZ 86004"
+    ],
+    "nonDrive": [
+      "South Kaibab Trailhead 只靠 Kaibab Rim（Orange）東行接駁，不是自駕點",
+      "備案：步道結冰或接駁停駛，就留在 Mather／Yavapai，不勉強下到 Ooh Aah Point。接駁停駛可問 Xanterra 計程車 (928) 638-2631"
+    ],
+    "verified": "reference",
+    "verifiedLabel": "車程是約 4h20 純駕駛再加休息的一般估計，不是即時 Google。Orange Route 班表見 NPS 2026 秋季頁。終點是 US-89 的 Oasis"
+  },
+  {
+    "date": "11/22",
+    "day": "SUN",
+    "num": "03",
+    "title": "06:00 Grand Canyon 出發 → 12:00 Ken’s Lower Antelope Canyon",
+    "region": "GRAND CANYON → PAGE",
+    "stay": "The Coyote Cottage, Page",
+    "reference": "06:00 從 Grand Canyon Oasis 沿 US-89 北上 Page，不回 Tusayan、不繞 Desert View。Ken’s 12:00；11:00 前到集合點",
+    "events": [
+      [
+        "06:00（Arizona）",
+        "Grand Canyon Oasis 發車",
+        "沿 US-89 北上 Page，清晨可能結冰"
+      ],
+      [
+        "約 09:30–10:30",
+        "抵達 Page 周邊、加油／簡單早餐",
+        "以實際導航時間為準；請勿增加任何會影響 11:00 抵達 Ken’s 的景點"
+      ],
+      [
+        "11:00 前（建議）",
+        "抵達 Ken’s Tours 停車場／集合地點",
+        "先找到正確入口、停車與洗手間；Ken’s Tours 的地址及集合規定以預訂確認信為準"
+      ],
+      [
+        "11:30 前（最晚報到目標）",
+        "Ken’s Tours 完成 Check-in",
+        "Ken’s 官方要求至少提前 30 分鐘報到，勿壓線"
+      ],
+      [
+        "12:00–約 13:15",
+        "Ken’s Lower Antelope Canyon｜導覽",
+        "固定 12:00 預計場次；實際結束時間依業者與當日狀況調整"
+      ],
+      [
+        "下午",
+        "Page 午餐、休息",
+        "Horseshoe Bend 與 Glen Canyon 已移出 11/23 上午，不再留到明天補。今天下午留在 Page"
+      ],
+      [
+        "晚上",
+        "The Coyote Cottage 入住、晚餐",
+        "Page 市區，餐廳可步行。確切門牌等 Airbnb 確認信；隔天從這裡去 Bryce"
+      ]
+    ],
+    "points": [
+      "Grand Canyon Oasis, 28272 N US Highway 89, Flagstaff, AZ 86004",
+      "Ken's Tours, Indian Route 222, Page, Arizona 86040",
+      "Page, AZ"
+    ],
+    "nonDrive": [
+      "Lower Antelope Canyon 為 Ken’s 導覽，12:00 開始，11:30 前完成 Check-in",
+      "The Coyote Cottage 在 Page 市區；Airbnb 確認前地圖終點停在 Page，不猜門牌"
+    ],
+    "verified": "reference",
+    "verifiedLabel": "這天從 US-89 北上，不再經過 Tusayan。Grand Canyon 與 Page 都是 Arizona MST；Ken’s 12:00 必須提前 30 分鐘報到"
+  },
+  {
+    "date": "11/23",
+    "day": "MON",
+    "num": "04",
+    "title": "Wahweap 後直奔 Bryce｜Queen’s Garden",
+    "region": "PAGE → BRYCE CANYON",
+    "stay": "Best Western Plus Ruby's Inn",
+    "reference": "Page 只停 Wahweap。之後到 Bryce 約 3–3.5h 一般估計，不是即時 Google。11 月 Page 與 Bryce 都是 MST，沒有多一小時。Bryce 接駁車這個季節不開",
+    "events": [
+      [
+        "07:00",
+        "The Coyote Cottage 出發",
+        "不排 Horseshoe Bend、Glen Canyon Dam、Lake Powell Kayak"
+      ],
+      ["07:15–07:40", "Wahweap Overlook", "這天在 Page 唯一的停留，拍完就走"],
+      [
+        "07:40",
+        "前往 Bryce Canyon",
+        "經 Kanab／US-89／UT-12。午餐用短停或車上解決，健行不要晚於 12:15 才開始"
+      ],
+      [
+        "約 11:00–11:45",
+        "Sunrise Point 停車場",
+        "私人車可開到觀景台。先看當日步道告示再下山"
+      ],
+      [
+        "11:45–14:15",
+        "主方案：Queen’s Garden 原路往返",
+        "1.8 miles，爬升約 450 ft，官方 1–2h，冬季預留約 2.5h。中等。登山口在 Sunrise Point。日落約 17:13 MST，要在天黑前回到觀景台"
+      ],
+      [
+        "同一時段的備案",
+        "Navajo 組合環線，或只走 Rim",
+        "若出發前 Navajo Loop 兩側都重新開放且沒有結冰，才改走約 2.9 miles 的 Queen’s + Navajo，預留到 14:45。目前兩側關閉，不當成可走。結冰或落石就只走 Sunrise 到 Sunset 的鋪面 Rim Trail"
+      ],
+      [
+        "14:15–17:15",
+        "Inspiration Point 與夕陽",
+        "健行結束後才看。Bryce Point 視路況，時間不夠就留在 Sunrise／Sunset Point"
+      ],
+      [
+        "晚上",
+        "Ruby’s Inn 入住、晚餐",
+        "Best Western Plus Ruby's Inn，26 S Main St，就在園區外。高海拔可能低於冰點。隔天 10:00 從這裡出發"
+      ]
+    ],
+    "points": [
+      "Page, AZ",
+      "Wahweap Overlook, Page, AZ",
+      "Sunrise Point, Bryce Canyon National Park, UT",
+      "Best Western Plus Ruby's Inn, 26 S Main St, Bryce Canyon City, UT 84764"
+    ],
+    "nonDrive": [
+      "Queen’s Garden 從 Sunrise Point 的步道下去，地圖只開到停車場",
+      "Navajo Loop 的 Wall Street 與 Two Bridges 在 2026/11 上旬關閉至另行通知。Horseshoe Bend 與 Glen Canyon 已移出這天"
+    ],
+    "verified": "other",
+    "verifiedLabel": "Page → Bryce 約 3–3.5h 是一般路況估計，不是即時 Google。步道狀態以出發當天的 NPS 公告為準"
+  },
+  {
+    "date": "11/24",
+    "day": "TUE",
+    "num": "05",
+    "title": "Canyon Overlook 後到 La Verkin",
+    "region": "BRYCE CANYON → LA VERKIN",
+    "stay": "沙漠綠洲，La Verkin",
+    "reference": "10:00 從 Ruby’s Inn 出發。到 Zion 東側約 1.5–2h 一般估計，不是即時 Google。先健行再過隧道。日落約 17:17 MST。住 La Verkin，不住 Springdale",
+    "events": [
+      [
+        "08:30–09:30（optional）",
+        "Bryce 觀景台與早餐",
+        "路乾才進園看 Sunrise 或 Sunset Point，09:30 前回到北出口。這是往返，不放進往 Zion 的主導航。結冰就只在飯店吃早餐"
+      ],
+      [
+        "10:00",
+        "從 Ruby’s Inn 前往 Zion 東入口",
+        "26 S Main St 出發。UT-12 → US-89 → UT-9。山區和隧道可能塞車或結冰。Bryce 與 Zion 都是 MST"
+      ],
+      [
+        "12:00–13:00",
+        "Canyon Overlook 停車場",
+        "車位少，這個窗口含找車位。若 14:00 還沒開始走，就取消步道"
+      ],
+      [
+        "13:00–14:30",
+        "Canyon Overlook Trail",
+        "約 1–1.2 miles 往返，官方約 1h，預留 1–1.5h。有陡坡與落差。必須在天黑前回到停車場；日落約 17:17"
+      ],
+      [
+        "14:30–16:00",
+        "過隧道，到 La Verkin",
+        "Zion–Mount Carmel Tunnel 之後經 Springdale 再往西。入住後不再開回東側"
+      ],
+      [
+        "16:00–16:30",
+        "沙漠綠洲入住",
+        "Confluence Park 旁，不是 Springdale。門牌等 Airbnb 確認信"
+      ]
+    ],
+    "points": [
+      "Best Western Plus Ruby's Inn, 26 S Main St, Bryce Canyon City, UT 84764",
+      "Canyon Overlook Trailhead, Zion National Park, UT",
+      "Confluence Park, La Verkin, UT"
+    ],
+    "nonDrive": [
+      "Canyon Overlook 從停車場步行。導航先到 trailhead，再繼續開往 La Verkin",
+      "備案：沒有車位、結冰，或 14:00 後才到，就不走這條有落差的步道，直接過隧道"
+    ],
+    "verified": "other",
+    "verifiedLabel": "Bryce → Zion 東側約 1.5–2h 是一般估計，不是即時 Google。地圖終點是 Confluence Park，房子在旁邊，門牌等確認信"
+  },
+  {
+    "date": "11/25",
+    "day": "WED",
+    "num": "06",
+    "title": "Riverside Walk｜接駁車進峽谷",
+    "region": "LA VERKIN ↔ ZION",
+    "stay": "沙漠綠洲，La Verkin",
+    "reference": "住 La Verkin，約 30 分鐘到 Visitor Center。接駁單程約 40–45 分鐘，不是開車。日落約 17:16 MST，16:15 前離開 Springdale",
+    "events": [
+      [
+        "06:15",
+        "從沙漠綠洲出發",
+        "早餐帶走。要趕上早晨的接駁，不能 07:00 才從 La Verkin 出門"
+      ],
+      [
+        "06:45–07:15",
+        "Visitor Center 停車",
+        "2026/10/25–11/28：首班 07:00，最末班往峽谷 17:00，Temple of Sinawava 最後離園 18:15。11/29 起沒有接駁"
+      ],
+      [
+        "07:15–08:15",
+        "接駁到 Temple of Sinawava，第 9 站",
+        "含等車。單程約 40–45 分鐘。私車不能開進峽谷"
+      ],
+      [
+        "08:15–09:45",
+        "Riverside Walk 往返",
+        "鋪面步道走到 The Narrows 入口後原路返回。預留 1.5h。這不是涉水進入 Virgin River"
+      ],
+      [
+        "09:45–11:00",
+        "接駁回 Visitor Center",
+        "等車和回程另外算，不併進健行時間"
+      ],
+      [
+        "11:00–16:00（optional）",
+        "Pa'rus Trail，或開放的 Emerald Pools",
+        "時間和體力夠才加。不把 The Narrows 涉水排進來"
+      ],
+      [
+        "16:15 前",
+        "回 La Verkin",
+        "回程約 30 分鐘。日落約 17:16，要在天黑前回到房子"
+      ]
+    ],
+    "points": [
+      "Confluence Park, La Verkin, UT",
+      "Zion Canyon Visitor Center, Springdale, UT",
+      "Confluence Park, La Verkin, UT"
+    ],
+    "nonDrive": [
+      "Riverside Walk 只靠接駁車到第 9 站。地圖不把 Temple of Sinawava 畫成自駕點",
+      "備案：接駁停駛、步道結冰或沒趕上早晨班次，改走 Visitor Center 附近的 Pa'rus Trail，不下峽谷"
+    ],
+    "verified": "other",
+    "verifiedLabel": "接駁時刻來自 NPS 2026/10/25–11/28 班表。La Verkin 到 Visitor Center 約 30 分鐘是房源與一般路況估計，不是即時 Google"
+  },
+  {
+    "date": "11/26",
+    "day": "THU",
+    "num": "07",
+    "title": "Zion → Las Vegas｜感恩節與第一場秀",
+    "region": "LA VERKIN → LAS VEGAS",
+    "stay": "Virgin Hotels Las Vegas",
+    "reference": "從 La Verkin 回 Virgin Hotels（4455 Paradise Rd）。比從 Springdale 出發稍近，仍預留約 2.5h；Utah 到 Nevada 時鐘退 1h",
+    "events": [
+      [
+        "09:00–10:00",
+        "La Verkin 吃早餐、退房",
+        "沙漠綠洲。退房後直接上 I-15 回 Las Vegas"
+      ],
+      [
+        "上午至中午",
+        "開車返回 Las Vegas",
+        "從 Utah 到 Nevada 當地時間會退 1 小時"
+      ],
+      [
+        "下午",
+        "Virgin Hotels Check-in、休息",
+        "4455 Paradise Rd，在 Strip 東邊約 1 英里，離機場近"
+      ],
+      [
+        "傍晚",
+        "感恩節晚餐（建議提前訂位）",
+        "若看 19:00 表演，晚餐要安排早一點或表演結束後"
+      ],
+      [
+        "19:00（暫定）",
+        "Colin Cloud: Mastermind 魔術秀",
+        "11/26 有公開售票日程資訊；尚未購票，請以實際場次確認"
+      ]
+    ],
+    "points": [
+      "Confluence Park, La Verkin, UT",
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169"
+    ],
+    "nonDrive": [],
+    "verified": "other",
+    "verifiedLabel": "起點是 La Verkin，終點是 Paradise Road 的 Virgin Hotels，不是 Strip"
+  },
+  {
+    "date": "11/27",
+    "day": "FRI",
+    "num": "08",
+    "title": "Fire Wave、Seven Wonders、White Domes",
+    "region": "VIRGIN HOTELS ↔ VALLEY OF FIRE",
+    "stay": "Virgin Hotels Las Vegas",
+    "reference": "07:00 從 Virgin Hotels 出發。單程約 1–1.25h 一般估計，不是即時 Google。兩條步道要開車接，不是連續徒步。日落約 16:24 PST",
+    "events": [
+      [
+        "07:00（Nevada PST）",
+        "Virgin Hotels 出發",
+        "4455 Paradise Rd。11/27 是週五，也是感恩節連假"
+      ],
+      [
+        "約 08:00–08:30",
+        "西入口進園",
+        "2026/8/3 起西入口週一至週四關閉、週五至週日開放，施工預計到年底。若臨時改東入口，後面的時間整段後移，先砍 optional 景點"
+      ],
+      [
+        "08:30–10:30",
+        "Fire Wave + Seven Wonders Loop",
+        "停 White Domes Road 的 Fire Wave 停車場。官方環線約 1.8 miles；只到 Fire Wave 約 1.5 miles 往返。預留 2h。沙地會比里程更累"
+      ],
+      [
+        "10:30–10:45",
+        "開車到 White Domes Trailhead",
+        "中間是園區道路，不是步行串接"
+      ],
+      [
+        "10:45–12:00",
+        "White Domes Loop",
+        "官方約 1.1 miles 環線，含一段窄縫。預留約 1h15。兩條加起來約 2.9 miles 步道，不是一條 3.2 miles 的連續路線"
+      ],
+      ["12:00–13:00", "午餐、休息", "車上或野餐區"],
+      [
+        "13:00–15:00（optional）",
+        "Visitor Center、Atlatl Rock、Elephant Rock",
+        "排在兩條健行之後。回程若塞車或走東入口，就直接離園"
+      ],
+      [
+        "15:00–15:30",
+        "離開，回 Virgin Hotels",
+        "園區日出至日落。日落約 16:24，15:30 前出門才有緩衝"
+      ],
+      ["晚上", "Las Vegas 自由活動", "這天沒有已訂的秀"]
+    ],
+    "points": [
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
+      "Fire Wave Trailhead, Valley of Fire State Park, NV",
+      "White Domes Trailhead, Valley of Fire State Park, NV",
+      "Atlatl Rock, Valley of Fire State Park, NV",
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169"
+    ],
+    "nonDrive": [
+      "Fire Wave／Seven Wonders 與 White Domes 是兩個停車場。5/15–9/30 例行封閉，11/27 不在這段，仍要看臨時公告",
+      "備案：步道臨時關閉或西入口不開放，就改東入口並只保留還開著的那一條，不把兩段走成一條步道"
+    ],
+    "verified": "other",
+    "verifiedLabel": "西入口週五開放來自 2026/7/28 州立公園公告。步道里程來自園區地圖。車程不是即時 Google"
+  },
+  {
+    "date": "11/28",
+    "day": "SAT",
+    "num": "09",
+    "title": "Las Vegas｜Venetian、Bellagio、ROUGE",
+    "region": "VIRGIN HOTELS ↔ STRIP",
+    "stay": "Virgin Hotels Las Vegas",
+    "reference": "從 Paradise Road 的 Virgin Hotels 進出 Strip。飯店離機場近，離 Venetian 要開車或叫車",
+    "events": [
+      ["上午", "Venetian 威尼斯人購物街", "保留原行程"],
+      ["下午", "Bellagio Conservatory 花園", "保留原行程"],
+      ["傍晚", "Bellagio 噴泉、Strip 夜景", "可與晚餐順路安排"],
+      [
+        "晚上（待確認）",
+        "ROUGE at The STRAT 表演",
+        "第二場秀；實際開演時間與 11/28 座位以官方訂票頁為準"
+      ],
+      [
+        "夜間",
+        "返回 Virgin Hotels",
+        "4455 Paradise Rd。隔天早上退房；23:59 JetBlue Flight 948 從 LAS Terminal 3 回 JFK"
+      ]
+    ],
+    "points": [
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
+      "The Venetian Resort Las Vegas, Las Vegas, NV",
+      "Bellagio Conservatory & Botanical Gardens, Las Vegas, NV",
+      "The STRAT Hotel Casino, Las Vegas, NV",
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169"
+    ],
+    "nonDrive": ["ROUGE 尚未購票，請以 11/28 實際可訂場次為準"],
+    "verified": "other",
+    "verifiedLabel": "Vegas 市區不顯示固定駕車分鐘數，交通取決於住宿位置、交通管制與停車場"
+  },
+  {
+    "date": "11/29",
+    "day": "SUN",
+    "num": "10",
+    "title": "回程日｜JetBlue 948，23:59 LAS Terminal 3",
+    "region": "LAS VEGAS → NEW YORK",
+    "stay": "無，返程日",
+    "reference": "早上先在 Virgin Hotels 退房。晚上 Jason 從 4455 Paradise Rd 送到 LAS Terminal 3，再去還車。飯店離機場近，時間主要留給報到",
+    "events": [
+      [
+        "白天",
+        "Virgin Hotels 退房、收行李",
+        "訂房到 11/29 早上退房。班機是深夜，白天行李要自己帶著"
+      ],
+      [
+        "晚上、起飛前",
+        "Jason 送到 LAS Terminal 3",
+        "JetBlue Flight 948。先把大家放到航廈，再去還車；預留國內航班報到與安檢"
+      ],
+      [
+        "23:59（LAS）",
+        "JetBlue Flight 948 起飛",
+        "LAS Terminal 3；直飛 JFK，約 4 小時 50 分。11/30（一）07:49 抵達 JFK"
+      ]
+    ],
+    "points": [
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
+      "Harry Reid International Airport Terminal 3, Las Vegas, NV"
+    ],
+    "nonDrive": []
+  }
+]

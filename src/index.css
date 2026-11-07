@@ -54,12 +54,14 @@
   overflow: hidden;
 }
 
-nav {
+.site-bar {
   display: flex;
   height: 104px;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   border-bottom: 1px solid #dadbdd;
+  line-height: 1.5;
 }
 
 .identity,
@@ -776,14 +778,6 @@ nav {
   background: #fafaf8;
 }
 
-.travel-nav {
-  display: flex;
-  height: 104px;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #dadbdd;
-}
-
 .back-link {
   display: flex;
   align-items: center;
@@ -1035,6 +1029,11 @@ nav {
   background: #7351d7;
 }
 
+.legend-swatch.planned {
+  border-color: #c4b2f3;
+  background: #e4def8;
+}
+
 .map-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
@@ -1100,6 +1099,18 @@ nav {
   color: white;
 }
 
+.state-tile.is-planned {
+  border-color: #c4b2f3;
+  background: #e4def8;
+  color: #7351d7;
+}
+
+.state-tile.is-planned:hover {
+  border-color: #b7a1ff;
+  background: #d8ccf6;
+  color: #7351d7;
+}
+
 .state-tile.is-selected {
   z-index: 3;
   outline: 3px solid #fafaf8;
@@ -1151,6 +1162,10 @@ nav {
   color: #b7a1ff;
 }
 
+.state-detail-top > span.status-planned {
+  color: #d4c6f5;
+}
+
 .detail-label {
   margin-bottom: 8px;
   color: #8e9097;
@@ -1176,6 +1191,20 @@ nav {
   color: #b2b3ba;
   font-size: 13px;
   line-height: 1.7;
+}
+
+.itinerary-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: #f4f1ea;
+  font-size: 13px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.itinerary-link:hover {
+  color: #d4c6f5;
 }
 
 .sample-tag {
@@ -1303,12 +1332,12 @@ footer span:first-child {
 }
 
 @media (max-width: 760px) {
-  nav {
+  .site-bar {
     height: 82px;
   }
 
-  .identity > span:last-child,
-  .nav-links > a:not(.purple-link) {
+  .site-bar .identity > span:last-child,
+  .intro .nav-links > a:not(.purple-link) {
     display: none;
   }
 
@@ -1406,10 +1435,6 @@ footer span:first-child {
 
   .travel-preview {
     min-height: 340px;
-  }
-
-  .travel-nav {
-    height: 82px;
   }
 
   .travel-header {
@@ -1520,10 +1545,6 @@ footer span:first-child {
   .preview-tiles i {
     width: 42px;
     height: 32px;
-  }
-
-  .travel-nav .identity > span:last-child {
-    display: none;
   }
 
   .gallery-heading {

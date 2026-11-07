@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SouthwestTrip from "./travel/plans/2026-fall-southwest/SouthwestTrip";
 
 const asset = (name: string) => `/assets/${name}`;
 
@@ -151,6 +152,14 @@ const stateTiles = [
   ["TX", "Texas", 7, 5],
   ["FL", "Florida", 7, 9],
 ] as const;
+
+const plannedStates = new Set(["NV", "UT", "AZ"]);
+
+const southwestPlan = {
+  date: "Nov 20–29, 2026",
+  note: "Planned Southwest road trip across Nevada, Utah, and Arizona.",
+  href: "#2026-fall-southwest",
+};
 
 const demoTrips: Record<string, { date: string; note: string }> = {
   CA: {
@@ -361,11 +370,12 @@ function TravelScreen() {
   const [selected, setSelected] = useState("NY");
   const selectedState = stateTiles.find(([code]) => code === selected)!;
   const trip = demoTrips[selected];
+  const planned = plannedStates.has(selected);
   const selectedPhotos = demoPhotos[selected] ?? [];
 
   return (
     <main className="travel-screen">
-      <nav className="travel-nav page-pad" aria-label="Travel map navigation">
+      <nav className="site-bar page-pad" aria-label="Travel map navigation">
         <a className="identity" href="#life" aria-label="Back to portfolio">
           <strong>LW.</strong>
           <span className="identity-rule" />
@@ -401,6 +411,9 @@ function TravelScreen() {
               <i className="legend-swatch visited" /> Visited
             </span>
             <span>
+              <i className="legend-swatch planned" /> Planned
+            </span>
+            <span>
               <i className="legend-swatch" /> Not visited
             </span>
           </div>
@@ -412,15 +425,17 @@ function TravelScreen() {
             <div className="state-map">
               {stateTiles.map(([code, name, row, column]) => {
                 const visited = Boolean(demoTrips[code]);
+                const planned = plannedStates.has(code);
+                const status = visited ? "visited in demo data" : planned ? "planned" : "not visited";
                 return (
                   <button
-                    className={`state-tile ${visited ? "is-visited" : ""} ${
+                    className={`state-tile ${visited ? "is-visited" : ""} ${planned ? "is-planned" : ""} ${
                       selected === code ? "is-selected" : ""
                     }`}
                     style={{ gridRow: row, gridColumn: column }}
                     key={code}
                     type="button"
-                    aria-label={`${name}, ${visited ? "visited in demo data" : "not visited"}`}
+                    aria-label={`${name}, ${status}`}
                     aria-pressed={selected === code}
                     onClick={() => setSelected(code)}
                   >
@@ -434,8 +449,8 @@ function TravelScreen() {
           <aside className="state-detail" aria-live="polite">
             <div className="state-detail-top">
               <span>{selected}</span>
-              <span className={trip ? "status-visited" : ""}>
-                {trip ? "Visited" : "Not visited"}
+              <span className={trip ? "status-visited" : planned ? "status-planned" : ""}>
+                {trip ? "Visited" : planned ? "Planned" : "Not visited"}
               </span>
             </div>
             <div>
@@ -452,6 +467,17 @@ function TravelScreen() {
                 </div>
                 <p className="trip-note">{trip.note}</p>
               </>
+            ) : planned ? (
+              <>
+                <div className="trip-date">
+                  <p className="detail-label">Travel time</p>
+                  <strong>{southwestPlan.date}</strong>
+                </div>
+                <p className="trip-note">{southwestPlan.note}</p>
+                <a className="itinerary-link" href={southwestPlan.href}>
+                  Open the planned itinerary ↗
+                </a>
+              </>
             ) : (
               <p className="trip-note">
                 No sample trip is recorded for this state yet. Select a darker purple state to see a
@@ -459,7 +485,11 @@ function TravelScreen() {
               </p>
             )}
             <div className="sample-tag">
-              {trip ? "PERSONAL DATE & NOTE TO BE ADDED" : "NO VISIT RECORDED"}
+              {trip
+                ? "PERSONAL DATE & NOTE TO BE ADDED"
+                : planned
+                  ? "PLANNED ITINERARY"
+                  : "NO VISIT RECORDED"}
             </div>
           </aside>
         </div>
@@ -471,7 +501,9 @@ function TravelScreen() {
           <p>
             {selectedPhotos.length
               ? `Sample imagery for ${selectedState[1]}—personal travel photos can replace these later.`
-              : `No sample photos for ${selectedState[1]} yet.`}
+              : planned
+                ? `No photos for ${selectedState[1]} yet. The planned itinerary is linked in the panel above.`
+                : `No sample photos for ${selectedState[1]} yet.`}
           </p>
         </div>
         {selectedPhotos.length ? (
@@ -498,9 +530,11 @@ function TravelScreen() {
             <div>
               <h2>No photos here yet.</h2>
               <p>
-                {trip
-                  ? `Personal travel photos for ${selectedState[1]} can be added later.`
-                  : "This state is not marked as visited. Choose a dark purple state to preview its sample photo set."}
+                {planned
+                  ? `Photos for ${selectedState[1]} can be added after the trip.`
+                  : trip
+                    ? `Personal travel photos for ${selectedState[1]} can be added later.`
+                    : "This state is not marked as visited. Choose a dark purple state to preview its sample photo set."}
               </p>
             </div>
           </div>
@@ -518,26 +552,35 @@ function TravelScreen() {
   );
 }
 
+type Screen = "home" | "travel" | "southwest";
+
+function screenFromHash(hash: string): Screen {
+  if (hash === "#travel") return "travel";
+  if (hash === "#2026-fall-southwest") return "southwest";
+  return "home";
+}
+
 export default function App() {
-  const [isTravelScreen, setIsTravelScreen] = useState(() => window.location.hash === "#travel");
+  const [screen, setScreen] = useState<Screen>(() => screenFromHash(window.location.hash));
 
   useEffect(() => {
     const handleHashChange = () => {
-      const travel = window.location.hash === "#travel";
-      setIsTravelScreen(travel);
-      if (travel) window.scrollTo({ top: 0, behavior: "auto" });
+      const next = screenFromHash(window.location.hash);
+      setScreen(next);
+      if (next !== "home") window.scrollTo({ top: 0, behavior: "auto" });
     };
 
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
-  if (isTravelScreen) return <TravelScreen />;
+  if (screen === "travel") return <TravelScreen />;
+  if (screen === "southwest") return <SouthwestTrip />;
 
   return (
     <main>
       <section className="intro page-pad">
-        <nav aria-label="Primary navigation">
+        <nav className="site-bar" aria-label="Primary navigation">
           <a className="identity" href="#top" aria-label="Pei-Wen Lisa Wang, home">
             <strong>LW.</strong>
             <span className="identity-rule" />
