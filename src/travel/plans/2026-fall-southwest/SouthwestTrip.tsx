@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import "./southwest.css";
 import {
   cities,
@@ -19,6 +19,11 @@ const TRIP_TITLE =
   "2026 Southwest Road Trip｜Grand Canyon・Antelope Canyon・Bryce・Zion・Valley of Fire";
 
 type MapMode = "google" | "schematic";
+
+function scrollToSection(event: MouseEvent<HTMLAnchorElement>, id: string) {
+  event.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
 
 function labelOffset(id: CityId, y: number) {
   if (id === "BRYCE" || id === "GC") return y - 22;
@@ -272,9 +277,15 @@ export default function SouthwestTrip() {
           <span>Travel journal</span>
         </a>
         <div className="nav-links">
-          <a href="#itinerary">每日行程</a>
-          <a href="#map-panel">路線地圖</a>
-          <a href="#stays">住宿與提醒</a>
+          <a href="#2026-fall-southwest" onClick={(event) => scrollToSection(event, "itinerary")}>
+            每日行程
+          </a>
+          <a href="#2026-fall-southwest" onClick={(event) => scrollToSection(event, "map-panel")}>
+            路線地圖
+          </a>
+          <a href="#2026-fall-southwest" onClick={(event) => scrollToSection(event, "stays")}>
+            住宿與提醒
+          </a>
           <a className="nav-home" href="#travel">
             <span aria-hidden="true">←</span> 返回 Travel
           </a>
@@ -307,7 +318,7 @@ export default function SouthwestTrip() {
         <section className="loop-band" aria-label="這趟的環線">
           <div className="loop-copy">
             <p>Las Vegas，走到紅岩，再回到霓虹。</p>
-            <a className="hero-cta" href="#itinerary">
+            <a className="hero-cta" href="#2026-fall-southwest" onClick={(event) => scrollToSection(event, "itinerary")}>
               探索完整行程 <span aria-hidden="true">↗</span>
             </a>
           </div>

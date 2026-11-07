@@ -1,8 +1,16 @@
 # Pei-Wen (Lisa) Wang
 
-Personal site for Pei-Wen (Lisa) Wang, a software engineer in New York. One page on cloud and backend systems, shaped by experience across product, marketing, and research.
+Personal site: [https://lisa-0831.github.io/](https://lisa-0831.github.io/)
 
-The page has five sections:
+One React app for Pei-Wen (Lisa) Wang, a software engineer in New York. The portfolio covers cloud and backend systems, shaped by experience across product, marketing, and research. Travel pages sit beside it.
+
+## Pages
+
+- **Portfolio** — [https://lisa-0831.github.io/#life](https://lisa-0831.github.io/#life)
+- **Travel journal** — [https://lisa-0831.github.io/#travel](https://lisa-0831.github.io/#travel)
+- **Fall 2026 Southwest plan** — [https://lisa-0831.github.io/#2026-fall-southwest](https://lisa-0831.github.io/#2026-fall-southwest)
+
+The portfolio has five sections:
 
 - **Intro** — A short introduction, and current studies toward an MS in Information Systems & Computer Science at Cornell
 - **Engineering in production** — Results from Cloud Software Engineer work at Ubiquiti
@@ -10,9 +18,16 @@ The page has five sections:
 - **Journey** — Career path, a BA from National Taiwan University, and tools used day to day
 - **Contact** — Email, [LinkedIn](https://www.linkedin.com/in/peiwenwang0831), and [GitHub](https://github.com/lisa-0831)
 
+The travel journal is a map of visited states. Nevada, Utah, and Arizona are marked planned and link to the Southwest itinerary. That plan lives at `#2026-fall-southwest`.
+
 ## Stack
 
-React 19, TypeScript, Vite, and Tailwind CSS v4. Page content lives in `src/App.tsx`, styles in `src/index.css`, and images and icons in `public/assets/`.
+React 19, TypeScript, Vite, and Tailwind CSS v4.
+
+- Portfolio content is in `src/App.tsx`, with styles in `src/index.css` and images in `public/assets/`.
+- The shared top bar (the `LW.` row) is also in `src/index.css`.
+- Planned trips live under `src/travel/plans/`. The Southwest plan is `src/travel/plans/2026-fall-southwest/`.
+- Visited-state photos are in `public/travel/states/`. Trip photos are in `public/travel/plans/2026-fall-southwest/photos/`.
 
 ## Local development
 
