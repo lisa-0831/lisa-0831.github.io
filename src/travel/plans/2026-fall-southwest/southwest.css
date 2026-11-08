@@ -389,13 +389,6 @@
   font-size: 13px;
   font-weight: 500;
 }
-.southwest .day-notes,
-.southwest .drive-note {
-  margin: 8px 0 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
-}
 .southwest .day-foot {
   display: flex;
   align-items: center;
@@ -403,7 +396,6 @@
   gap: 16px;
   margin-top: 14px;
 }
-.southwest .day-foot .drive-note { margin: 0; }
 .southwest .day button {
   flex: none;
   height: 36px;
@@ -493,24 +485,6 @@
 .southwest .mapframe.schematic-active .schematic { display: block; background: #f7f5fb; }
 .southwest .svgmap-label { fill: #17191c; font-family: Inter, sans-serif; font-size: 12px; font-weight: 500; }
 .southwest .svgmap-caption { fill: #62646a; font-family: Inter, "Noto Sans TC", sans-serif; font-size: 11px; }
-.southwest .mapframe .overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: var(--bg);
-  padding: 24px;
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
-}
-.southwest .mapframe .overlay.show { display: flex; }
-.southwest .mapframe .overlay b { color: var(--ink); font-weight: 500; }
-.southwest .mapframe .overlay a { color: var(--ink); }
 .southwest .maplinks { display: flex; flex-wrap: nowrap; gap: 6px; margin: 10px 0 6px; }
 .southwest .maplink {
   display: inline-flex;
@@ -552,13 +526,6 @@
 .southwest .segment .route b { font-weight: 400; }
 .southwest .segment a { color: var(--purple); font-size: 13px; text-decoration: none; }
 .southwest .segment a:hover { text-decoration: underline; }
-.southwest .segment-note {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.6;
-}
-
 .southwest .bottom {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -572,7 +539,6 @@
   padding: 28px 24px;
 }
 .southwest .panel2 h2 { margin: 0 0 18px; font-size: 28px; }
-.southwest .panel2 h3 { margin: 28px 0 8px; font-size: 16px; font-weight: 500; }
 .southwest .panel2 p { color: var(--muted); font-size: 14px !important; line-height: 1.7; }
 .southwest table { width: 100%; border-collapse: collapse; font-size: 14px; }
 .southwest th {
