@@ -311,10 +311,12 @@ export const meals: DayMeals[] = [
     day: "THU",
     num: "07",
     slots: [
-      { label: "早餐", time: "抵達後", place: "Las Vegas" },
-      { label: "午餐", time: "下午", place: "Las Vegas" },
-      { label: "晚餐", time: "傍晚", place: "Las Vegas 感恩節晚餐；餐廳與時間待確認" },
+      { label: "早餐", time: "08:30–09:30", place: "La Verkin Airbnb 內吃完再出發" },
+      { label: "午餐", time: "中午", place: "La Verkin／Hurricane／St. George" },
+      { label: "晚餐", time: "抵達後", place: "Las Vegas 感恩節晚餐；餐廳與時間待確認" },
     ],
+    note:
+      "視體力於 St. George 擇一短停：Snow Canyon State Park、園內 Jenny’s Canyon Trail（0.5 mile／0.8 km，約 20 分鐘），或 Red Hills Desert Garden。",
   },
   {
     date: "11/27",

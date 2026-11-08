@@ -270,14 +270,25 @@
     "region": "LA VERKIN → LAS VEGAS",
     "stay": "Virgin Hotels Las Vegas",
     "events": [
-      ["09:00–10:00", "退房、前往 Las Vegas", "從 La Verkin 出發返回 Las Vegas"],
+      ["08:30–09:30", "Airbnb 早餐", "在沙漠綠洲吃完早餐、整理行李"],
+      ["09:30–10:00", "退房、離開 La Verkin", "沿 I-15 往 St. George／Las Vegas 方向行駛"],
       [
-        "上午至中午",
-        "前往 Las Vegas",
-        "車程約 2.5 小時；進入 Nevada 後時鐘調慢 1 小時"
+        "中午",
+        "La Verkin／Hurricane／St. George 午餐",
+        "依出發時間與大家想吃的餐廳決定停留地點"
       ],
-      ["下午", "Virgin Hotels Check-in、休息", "辦理入住並休息"],
-      ["傍晚", "感恩節晚餐", "餐廳與時間待確認"],
+      [
+        "下午（視體力）",
+        "St. George 短停觀光",
+        "候選 Snow Canyon State Park、園內 Jenny’s Canyon Trail、Red Hills Desert Garden；當天擇一"
+      ],
+      [
+        "之後",
+        "前往 Las Vegas",
+        "純車程約 2.5 小時；進入 Nevada 後時鐘調慢 1 小時"
+      ],
+      ["下午至傍晚", "Virgin Hotels Check-in、休息", "抵達時間依 St. George 是否停留而定"],
+      ["傍晚", "Las Vegas 感恩節晚餐", "餐廳與時間待確認"],
       ["晚上（待確認）", "Colin Cloud: Mastermind", "尚未購票，場次待確認"]
     ],
     "points": [
