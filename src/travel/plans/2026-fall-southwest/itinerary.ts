@@ -221,6 +221,7 @@ export type DayMeals = {
   day: string;
   num: string;
   slots: [MealSlot, MealSlot, MealSlot];
+  note?: string;
 };
 
 export const meals: DayMeals[] = [
@@ -233,35 +234,51 @@ export const meals: DayMeals[] = [
       { label: "午餐", time: "出發前", place: "紐約。行程沒有另排" },
       { label: "晚餐", time: "19:50 前", place: "JFK Terminal 5，或機上。22:45 到了就去飯店休息" },
     ],
+    note: "出發前跟 Jason 確認 11/21 早餐由誰準備；隔天帶上車吃。",
   },
   {
     date: "11/21",
     day: "SAT",
     num: "02",
     slots: [
-      { label: "早餐", time: "06:00 出門前", place: "帶走。紐約先買，或 Jason 在 Vegas 代買，車上吃" },
-      { label: "午餐", time: "約 11:30–12:15", place: "Grand Canyon Visitor Center" },
-      { label: "晚餐", time: "晚上抵達後", place: "Stargazer Tiny Home，Grand Canyon Oasis" },
+      { label: "早餐", time: "06:00 出發後", place: "前一晚準備好，車上吃" },
+      {
+        label: "午餐",
+        time: "約 11:30–12:15",
+        place: "Grand Canyon Village。候選 Canyon Village Market & Deli",
+      },
+      {
+        label: "晚餐",
+        time: "約 18:00–19:15",
+        place: "Grand Canyon Village。候選 Canyon Village Market & Deli、Arizona Steakhouse",
+      },
     ],
+    note:
+      "用餐時確認大家是否外帶 11/22 早餐。Canyon Village Market 可採買；Deli 截至 11/8 官方公告關閉。Arizona Steakhouse 晚餐建議訂位。",
   },
   {
     date: "11/22",
     day: "SUN",
     num: "03",
     slots: [
-      { label: "早餐", time: "途中，或 09:30–10:30", place: "US-89 沿路，或抵達 Page 後" },
+      {
+        label: "早餐",
+        time: "05:30–06:00／出發後",
+        place: "前晚已買就在 Airbnb 吃；未買則在 US-89 約 23 分鐘外的 Burger King 購買",
+      },
       { label: "午餐", time: "14:00–15:00", place: "Page。導覽結束後" },
-      { label: "晚餐", time: "傍晚入住後", place: "The Coyote Cottage，Page" },
+      { label: "晚餐", time: "傍晚", place: "Page" },
     ],
+    note: "Page 有 Walmart，可補充後續早餐、飲水與行動糧。",
   },
   {
     date: "11/23",
     day: "MON",
     num: "04",
     slots: [
-      { label: "早餐", time: "07:00 出發前", place: "The Coyote Cottage，Page" },
-      { label: "午餐", time: "約 11:00–11:45", place: "Sunrise Point。簡單午餐，建議自備" },
-      { label: "晚餐", time: "晚上入住後", place: "Ruby's Inn，Bryce Canyon City" },
+      { label: "早餐", time: "07:00 出發前", place: "Airbnb 吃完再出發" },
+      { label: "午餐", time: "約 11:00–11:45", place: "Bryce Canyon City" },
+      { label: "晚餐", time: "晚上", place: "Bryce Canyon City" },
     ],
   },
   {
@@ -269,19 +286,24 @@ export const meals: DayMeals[] = [
     day: "TUE",
     num: "05",
     slots: [
-      { label: "早餐", time: "10:00 出發前", place: "Ruby's Inn，Bryce Canyon City" },
-      { label: "午餐", time: "12:00–13:00", place: "Canyon Overlook Trailhead。簡單午餐，建議自備" },
-      { label: "晚餐", time: "16:00 入住後", place: "沙漠綠洲，La Verkin" },
+      { label: "早餐", time: "08:30–09:30", place: "Ruby's Inn 飯店附早餐" },
+      {
+        label: "午餐",
+        time: "依當日進度",
+        place: "Bryce Canyon 內用、外帶，或在途中 Glendale／Orderville 用餐",
+      },
+      { label: "晚餐", time: "入住後", place: "Springdale／La Verkin／Hurricane" },
     ],
+    note: "Hurricane 有 Walmart，可補充早餐、飲水與行動糧。",
   },
   {
     date: "11/25",
     day: "WED",
     num: "06",
     slots: [
-      { label: "早餐", time: "06:15 出發前", place: "沙漠綠洲帶走，車上吃" },
-      { label: "午餐", time: "11:00 之後", place: "Zion，Visitor Center 附近" },
-      { label: "晚餐", time: "約 16:15 回到後", place: "沙漠綠洲，La Verkin。行程沒有另約餐廳" },
+      { label: "早餐", time: "06:15 出發前", place: "Airbnb 吃完再出發" },
+      { label: "午餐", time: "11:00 之後", place: "Zion National Park 內" },
+      { label: "晚餐", time: "返回後", place: "Springdale／La Verkin／Hurricane" },
     ],
   },
   {
@@ -289,9 +311,9 @@ export const meals: DayMeals[] = [
     day: "THU",
     num: "07",
     slots: [
-      { label: "早餐", time: "09:00–10:00", place: "沙漠綠洲。退房前" },
-      { label: "午餐", time: "車程中", place: "回 Las Vegas 的路上，或抵達 Virgin Hotels 後" },
-      { label: "晚餐", time: "傍晚", place: "感恩節晚餐。餐廳與時間待確認" },
+      { label: "早餐", time: "抵達後", place: "Las Vegas" },
+      { label: "午餐", time: "下午", place: "Las Vegas" },
+      { label: "晚餐", time: "傍晚", place: "Las Vegas 感恩節晚餐；餐廳與時間待確認" },
     ],
   },
   {
@@ -299,9 +321,13 @@ export const meals: DayMeals[] = [
     day: "FRI",
     num: "08",
     slots: [
-      { label: "早餐", time: "07:00 出發前", place: "Virgin Hotels，或帶走" },
-      { label: "午餐", time: "12:00–13:00", place: "Valley of Fire 野餐區，或車上" },
-      { label: "晚餐", time: "晚上", place: "Las Vegas。回到 Virgin Hotels 後自由活動" },
+      { label: "早餐", time: "07:00 出發前", place: "Las Vegas" },
+      {
+        label: "午餐",
+        time: "出發前買好",
+        place: "在 Las Vegas 購買，12:00–13:00 於 Valley of Fire 用餐",
+      },
+      { label: "晚餐", time: "晚上", place: "Las Vegas" },
     ],
   },
   {
@@ -309,9 +335,9 @@ export const meals: DayMeals[] = [
     day: "SAT",
     num: "09",
     slots: [
-      { label: "早餐", time: "上午出門前", place: "Virgin Hotels" },
-      { label: "午餐", time: "上午", place: "The Venetian 館內" },
-      { label: "晚餐", time: "傍晚", place: "Strip。Bellagio 噴泉之後，餐廳未定" },
+      { label: "早餐", time: "上午", place: "Las Vegas" },
+      { label: "午餐", time: "中午", place: "Las Vegas；可安排在 The Venetian 館內" },
+      { label: "晚餐", time: "傍晚", place: "Las Vegas；Bellagio 噴泉行程前後安排" },
     ],
   },
   {
@@ -319,9 +345,9 @@ export const meals: DayMeals[] = [
     day: "SUN",
     num: "10",
     slots: [
-      { label: "早餐", time: "上午退房前", place: "Virgin Hotels" },
-      { label: "午餐", time: "白天", place: "Las Vegas。自由活動，地點未定" },
-      { label: "晚餐", time: "23:59 起飛前", place: "Las Vegas 或 LAS Terminal 3。集合時間待確認" },
+      { label: "早餐", time: "上午", place: "Las Vegas" },
+      { label: "午餐", time: "白天", place: "Las Vegas" },
+      { label: "晚餐", time: "前往機場前", place: "Las Vegas" },
     ],
   },
 ];

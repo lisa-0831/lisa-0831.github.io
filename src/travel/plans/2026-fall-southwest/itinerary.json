@@ -9,8 +9,8 @@
     "events": [
       [
         "起飛前",
-        "前往機場／準備隔日早餐",
-        "隔日 6:00 出門，擔心太早出門沒時間買早餐，可以在紐約先買好帶去，或是 Jason 在 Vegas 幫忙代買"
+        "與 Jason 確認隔日早餐",
+        "11/21 早餐帶上車吃；出發前確認由誰準備"
       ],
       [
         "19:50（JFK）",
@@ -45,12 +45,12 @@
       [
         "06:00（Nevada PST）",
         "從 Atwell Suites Henderson 出發",
-        "進入 Arizona 後時鐘調快 1 小時；車程約 4 小時 20 分，另加休息時間"
+        "早餐在車上吃；進入 Arizona 後時鐘調快 1 小時，車程約 4 小時 20 分，另加休息時間"
       ],
       [
         "約 11:30–12:15（Arizona MST）",
-        "Grand Canyon Visitor Center 停車、午餐",
-        "整理健行裝備並補充飲水"
+        "Grand Canyon Village 午餐、整裝",
+        "候選 Canyon Village Market & Deli；整理健行裝備並補充飲水"
       ],
       [
         "12:15–12:45",
@@ -65,18 +65,24 @@
       ["14:45–15:30", "搭接駁車返回 Visitor Center", "休息、補水"],
       [
         "15:30–17:20",
-        "Mather Point 或 Yavapai Point 看夕陽",
-        "日落約 17:16 MST"
+        "Mather Point → Rim Trail → Yavapai Point 看夕陽",
+        "沿鋪面 Rim Trail 步行 0.7 mile（1.1 km），約 20–30 分鐘；日落約 17:16 MST"
+      ],
+      ["17:20–約 18:00", "搭 Orange Route 返回 Visitor Center", "從 Yavapai Point 搭接駁車回停車處"],
+      [
+        "約 18:00–19:15",
+        "Grand Canyon Village 晚餐",
+        "候選 Canyon Village Market & Deli、Arizona Steakhouse；用餐時確認是否外帶隔日早餐"
       ],
       [
-        "17:20–晚上",
+        "約 19:15–晚上",
         "前往 Grand Canyon Oasis",
         "從 South Rim 前往 US-89 的住宿地，晚間抵達"
       ],
-      ["晚上", "入住 Stargazer Tiny Home", "辦理入住、晚餐與休息"],
+      ["晚上", "入住 Stargazer Tiny Home", "辦理入住、休息"],
       [
         "天候備案",
-        "Mather Point／Yavapai Point",
+        "South Rim 觀景區",
         "若步道結冰或關閉，改在 South Rim 觀景點活動"
       ]
     ],
@@ -95,13 +101,18 @@
     "stay": "The Coyote Cottage, Page",
     "events": [
       [
+        "05:30–06:00",
+        "Airbnb 早餐",
+        "前晚若已外帶早餐，就在 Grand Canyon Oasis 吃完再出發"
+      ],
+      [
         "06:00（Arizona MST）",
         "從 Grand Canyon Oasis 出發",
-        "沿 US-89 前往 Page，途中安排早餐與休息"
+        "若尚未準備早餐，沿 US-89 約 23 分鐘後在 Burger King 購買；之後前往 Page"
       ],
       [
         "約 09:30–10:30",
-        "抵達 Page、早餐與休息",
+        "抵達 Page、休息",
         "Grand Canyon 與 Page 使用相同時區"
       ],
       [
@@ -147,8 +158,8 @@
       ],
       [
         "約 11:00–11:45",
-        "抵達 Sunrise Point、簡單午餐",
-        "確認裝備後前往 Queen’s Garden Trailhead"
+        "Bryce Canyon City 午餐",
+        "用餐後前往 Sunrise Point，整理裝備並前往 Queen’s Garden Trailhead"
       ],
       [
         "11:45–14:15",
@@ -182,12 +193,13 @@
     "region": "BRYCE CANYON → LA VERKIN",
     "stay": "沙漠綠洲，La Verkin",
     "events": [
+      ["08:30–09:30", "Ruby’s Inn 早餐", "飯店附早餐；用餐後整理行李、退房"],
       [
         "10:00",
         "從 Ruby’s Inn 前往 Zion 東入口",
-        "經 UT-12／US-89／UT-9，車程約 1.5–2 小時"
+        "午餐依進度在 Bryce Canyon 內、外帶，或在 Glendale／Orderville 用餐；再經 UT-9 前往 Zion"
       ],
-      ["12:00–13:00", "抵達 Canyon Overlook Trailhead", "簡單午餐並準備健行"],
+      ["約 12:00–13:00", "抵達 Canyon Overlook Trailhead", "停車並準備健行"],
       [
         "13:00–14:30",
         "Canyon Overlook Trail",
@@ -219,7 +231,7 @@
     "region": "LA VERKIN ↔ ZION",
     "stay": "沙漠綠洲，La Verkin",
     "events": [
-      ["06:15", "從沙漠綠洲出發", "早餐帶走，車程約 30 分鐘"],
+      ["06:15", "從沙漠綠洲出發", "在 Airbnb 吃完早餐再出發，車程約 30 分鐘"],
       ["06:45–07:15", "抵達 Zion Canyon Visitor Center", "停車並前往接駁車站"],
       [
         "07:15–08:15",
@@ -258,7 +270,7 @@
     "region": "LA VERKIN → LAS VEGAS",
     "stay": "Virgin Hotels Las Vegas",
     "events": [
-      ["09:00–10:00", "早餐、退房", "從 La Verkin 出發返回 Las Vegas"],
+      ["09:00–10:00", "退房、前往 Las Vegas", "從 La Verkin 出發返回 Las Vegas"],
       [
         "上午至中午",
         "前往 Las Vegas",
@@ -306,7 +318,7 @@
         "White Domes Loop",
         "約 1.1 miles（1.8 km），預留約 1 小時 15 分；途中有一段窄縫峽谷"
       ],
-      ["12:00–13:00", "午餐、休息", "在園區野餐區或車上用餐"],
+      ["12:00–13:00", "午餐、休息", "午餐已在 Las Vegas 買好；在園區野餐區或車上用餐"],
       [
         "13:00–15:00",
         "Visitor Center、Atlatl Rock、Elephant Rock",
