@@ -149,7 +149,14 @@ function RouteCard() {
           <br />
           <strong>10 DAYS, 9 NIGHTS.</strong>
         </span>
-        <span className="route-arrow">↗</span>
+        <a
+          className="route-arrow"
+          href="#2026-fall-southwest"
+          aria-label="打開路線地圖"
+          onClick={(event) => scrollToSection(event, "map-panel")}
+        >
+          ↗
+        </a>
       </div>
     </div>
   );
@@ -322,7 +329,7 @@ export default function SouthwestTrip() {
               探索完整行程 <span aria-hidden="true">↗</span>
             </a>
           </div>
-          <div className="hero-right" aria-hidden="true">
+          <div className="hero-right">
             <RouteCard />
           </div>
         </section>

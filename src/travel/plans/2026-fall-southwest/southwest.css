@@ -154,7 +154,9 @@
   background: var(--purple);
   color: #fff;
   font-size: 18px;
+  text-decoration: none;
 }
+.southwest .route-arrow:hover { background: #6444c4; }
 .southwest .hero-art-caption { margin-top: 14px; }
 
 .southwest .wrap {
