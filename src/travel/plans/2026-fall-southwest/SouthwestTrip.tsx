@@ -446,6 +446,9 @@ export default function SouthwestTrip() {
                     <div className="day-info">
                       <h3>{tripDay.title}</h3>
                       <p className="region">{tripDay.region}</p>
+                      <p className="lodging">
+                        {tripDay.stay === "無，返程日" ? "返程日，無住宿" : `住 ${tripDay.stay}`}
+                      </p>
                     </div>
                   </div>
                   <ol className="timeline">
@@ -459,9 +462,6 @@ export default function SouthwestTrip() {
                       </li>
                     ))}
                   </ol>
-                  <p className="lodging">
-                    {tripDay.stay === "無，返程日" ? "返程日，無住宿" : `住 ${tripDay.stay}`}
-                  </p>
                   <div className="day-foot">
                     <button type="button" onClick={() => selectDay(index, true)}>
                       {index === chosen ? "正在看這天地圖" : "看這天的地圖"}
