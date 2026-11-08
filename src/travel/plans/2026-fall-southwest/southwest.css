@@ -611,6 +611,20 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px 18px;
 }
+.southwest .meal-note {
+  margin: 14px 0 0 !important;
+  border-left: 3px solid var(--purple);
+  background: #f5f2fb;
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 13px !important;
+  line-height: 1.65;
+}
+.southwest .meal-note b {
+  margin-right: 8px;
+  color: var(--ink);
+  font-weight: 500;
+}
 .southwest .meal-slot span {
   display: inline-block;
   border-radius: 100px;

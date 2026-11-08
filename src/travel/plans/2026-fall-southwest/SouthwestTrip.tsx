@@ -714,14 +714,22 @@ export default function SouthwestTrip() {
                     <b>{meal.date}</b>
                     <em>{meal.day}</em>
                   </div>
-                  <div className="meal-slots">
-                    {meal.slots.map((slot) => (
-                      <div className="meal-slot" key={`${meal.date}-${slot.label}`}>
-                        <span>{slot.label}</span>
-                        <b>{slot.time}</b>
-                        <p>{slot.place}</p>
-                      </div>
-                    ))}
+                  <div className="meal-content">
+                    <div className="meal-slots">
+                      {meal.slots.map((slot) => (
+                        <div className="meal-slot" key={`${meal.date}-${slot.label}`}>
+                          <span>{slot.label}</span>
+                          <b>{slot.time}</b>
+                          <p>{slot.place}</p>
+                        </div>
+                      ))}
+                    </div>
+                    {meal.note ? (
+                      <p className="meal-note">
+                        <b>重要注記</b>
+                        {meal.note}
+                      </p>
+                    ) : null}
                   </div>
                 </article>
               ))}
@@ -735,7 +743,7 @@ export default function SouthwestTrip() {
           </span>
           <a href="#travel">BACK TO TRAVEL ↗</a>
         </div>
-        <p className="endnote">更新日期：2026/11/07</p>
+        <p className="endnote">更新日期：2026/11/08</p>
       </main>
     </div>
   );
