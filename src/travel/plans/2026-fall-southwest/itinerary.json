@@ -8,6 +8,11 @@
     "stay": "Atwell Suites Henderson by IHG",
     "events": [
       [
+        "起飛前",
+        "前往機場／準備隔日早餐",
+        "隔日 6:00 出門，擔心太早出門沒時間買早餐，可以在紐約先買好帶去，或是 Jason 在 Vegas 幫忙代買"
+      ],
+      [
         "19:50（JFK）",
         "JetBlue Flight 711 起飛",
         "JFK Terminal 5；直飛 LAS，飛行時間約 5 小時 55 分"
@@ -15,9 +20,13 @@
       [
         "22:45（LAS）",
         "抵達 Harry Reid International Airport",
-        "當地時間抵達，領取行李後與 Jason 會合"
+        "當地時間抵達，領取行李後與 Jason 會合，Jason 加滿油來接機"
       ],
-      ["抵達後", "前往 Atwell Suites Henderson", "住宿位於 Henderson 市中心，車程依當晚路況而定"],
+      [
+        "抵達後",
+        "前往 Atwell Suites Henderson",
+        "住宿位於 Henderson 市中心，車程依當晚路況而定"
+      ],
       ["晚上", "辦理入住、休息", "隔天 06:00 出發前往 Grand Canyon"]
     ],
     "points": [
@@ -54,10 +63,22 @@
         "1.8 miles（2.9 km）往返，下降約 790 ft（230 m）；中等難度，回程為上坡，步道沒有飲水"
       ],
       ["14:45–15:30", "搭接駁車返回 Visitor Center", "休息、補水"],
-      ["15:30–17:20", "Mather Point 或 Yavapai Point 看夕陽", "日落約 17:16 MST"],
-      ["17:20–晚上", "前往 Grand Canyon Oasis", "從 South Rim 前往 US-89 的住宿地，晚間抵達"],
+      [
+        "15:30–17:20",
+        "Mather Point 或 Yavapai Point 看夕陽",
+        "日落約 17:16 MST"
+      ],
+      [
+        "17:20–晚上",
+        "前往 Grand Canyon Oasis",
+        "從 South Rim 前往 US-89 的住宿地，晚間抵達"
+      ],
       ["晚上", "入住 Stargazer Tiny Home", "辦理入住、晚餐與休息"],
-      ["天候備案", "Mather Point／Yavapai Point", "若步道結冰或關閉，改在 South Rim 觀景點活動"]
+      [
+        "天候備案",
+        "Mather Point／Yavapai Point",
+        "若步道結冰或關閉，改在 South Rim 觀景點活動"
+      ]
     ],
     "points": [
       "Atwell Suites Henderson, 150 S Water St, Henderson, NV 89015",
@@ -78,7 +99,11 @@
         "從 Grand Canyon Oasis 出發",
         "沿 US-89 前往 Page，途中安排早餐與休息"
       ],
-      ["約 09:30–10:30", "抵達 Page、早餐與休息", "Grand Canyon 與 Page 使用相同時區"],
+      [
+        "約 09:30–10:30",
+        "抵達 Page、早餐與休息",
+        "Grand Canyon 與 Page 使用相同時區"
+      ],
       [
         "11:00–11:30",
         "抵達 Ken’s Tours、完成 Check-in",
@@ -115,14 +140,26 @@
     "events": [
       ["07:00", "The Coyote Cottage 出發", "從 Page 前往 Wahweap Overlook"],
       ["07:15–07:40", "Wahweap Overlook", "欣賞 Lake Powell 與周圍地景"],
-      ["07:40–約 11:00", "前往 Bryce Canyon", "經 Kanab／US-89／UT-12，車程約 3–3.5 小時"],
-      ["約 11:00–11:45", "抵達 Sunrise Point、簡單午餐", "確認裝備後前往 Queen’s Garden Trailhead"],
+      [
+        "07:40–約 11:00",
+        "前往 Bryce Canyon",
+        "經 Kanab／US-89／UT-12，車程約 3–3.5 小時"
+      ],
+      [
+        "約 11:00–11:45",
+        "抵達 Sunrise Point、簡單午餐",
+        "確認裝備後前往 Queen’s Garden Trailhead"
+      ],
       [
         "11:45–14:15",
         "Queen’s Garden 原路往返",
         "1.8 miles（2.9 km），爬升約 450 ft（137 m）；中等難度，預留約 2.5 小時"
       ],
-      ["14:15–17:15", "Inspiration Point 與夕陽", "Bryce Canyon 日落約 17:13 MST"],
+      [
+        "14:15–17:15",
+        "Inspiration Point 與夕陽",
+        "Bryce Canyon 日落約 17:13 MST"
+      ],
       ["晚上", "入住 Best Western Plus Ruby's Inn", "辦理入住、晚餐與休息"],
       [
         "天候備案",
@@ -145,7 +182,11 @@
     "region": "BRYCE CANYON → LA VERKIN",
     "stay": "沙漠綠洲，La Verkin",
     "events": [
-      ["10:00", "從 Ruby’s Inn 前往 Zion 東入口", "經 UT-12／US-89／UT-9，車程約 1.5–2 小時"],
+      [
+        "10:00",
+        "從 Ruby’s Inn 前往 Zion 東入口",
+        "經 UT-12／US-89／UT-9，車程約 1.5–2 小時"
+      ],
       ["12:00–13:00", "抵達 Canyon Overlook Trailhead", "簡單午餐並準備健行"],
       [
         "13:00–14:30",
@@ -158,7 +199,11 @@
         "沿 UT-9 經 Springdale 前往住宿地"
       ],
       ["16:00–16:30", "入住沙漠綠洲", "辦理入住、晚餐與休息"],
-      ["天候備案", "前往 La Verkin", "若步道結冰或停車位已滿，取消健行並前往住宿地"]
+      [
+        "天候備案",
+        "前往 La Verkin",
+        "若步道結冰或停車位已滿，取消健行並前往住宿地"
+      ]
     ],
     "points": [
       "Best Western Plus Ruby's Inn, 26 S Main St, Bryce Canyon City, UT 84764",
@@ -176,7 +221,11 @@
     "events": [
       ["06:15", "從沙漠綠洲出發", "早餐帶走，車程約 30 分鐘"],
       ["06:45–07:15", "抵達 Zion Canyon Visitor Center", "停車並前往接駁車站"],
-      ["07:15–08:15", "搭接駁車到 Temple of Sinawava", "第 9 站；單程約 40–45 分鐘，時間包含候車"],
+      [
+        "07:15–08:15",
+        "搭接駁車到 Temple of Sinawava",
+        "第 9 站；單程約 40–45 分鐘，時間包含候車"
+      ],
       [
         "08:15–09:45",
         "Riverside Walk 往返",
@@ -189,7 +238,11 @@
         "依當日步道狀況與體力安排 Pa'rus Trail 或 Emerald Pools"
       ],
       ["16:15", "返回 La Verkin", "傍晚回到沙漠綠洲休息"],
-      ["天候備案", "Pa'rus Trail", "若峽谷步道關閉，改走 Visitor Center 附近步道"]
+      [
+        "天候備案",
+        "Pa'rus Trail",
+        "若峽谷步道關閉，改走 Visitor Center 附近步道"
+      ]
     ],
     "points": [
       "Confluence Park, La Verkin, UT",
@@ -206,7 +259,11 @@
     "stay": "Virgin Hotels Las Vegas",
     "events": [
       ["09:00–10:00", "早餐、退房", "從 La Verkin 出發返回 Las Vegas"],
-      ["上午至中午", "前往 Las Vegas", "車程約 2.5 小時；進入 Nevada 後時鐘調慢 1 小時"],
+      [
+        "上午至中午",
+        "前往 Las Vegas",
+        "車程約 2.5 小時；進入 Nevada 後時鐘調慢 1 小時"
+      ],
       ["下午", "Virgin Hotels Check-in、休息", "辦理入住並休息"],
       ["傍晚", "感恩節晚餐", "餐廳與時間待確認"],
       ["晚上（待確認）", "Colin Cloud: Mastermind", "尚未購票，場次待確認"]
@@ -229,13 +286,21 @@
         "從 Virgin Hotels 出發",
         "前往 Valley of Fire，單程車程約 1–1.25 小時"
       ],
-      ["約 08:00–08:30", "抵達 Valley of Fire", "進入園區後前往 Fire Wave Trailhead"],
+      [
+        "約 08:00–08:30",
+        "抵達 Valley of Fire",
+        "進入園區後前往 Fire Wave Trailhead"
+      ],
       [
         "08:30–10:30",
         "Fire Wave + Seven Wonders Loop",
         "約 1.8 miles（2.9 km），預留 2 小時；沙地行走較費力"
       ],
-      ["10:30–10:45", "前往 White Domes Trailhead", "兩段步道從不同停車場出發，中間搭車移動"],
+      [
+        "10:30–10:45",
+        "前往 White Domes Trailhead",
+        "兩段步道從不同停車場出發，中間搭車移動"
+      ],
       [
         "10:45–12:00",
         "White Domes Loop",
@@ -271,8 +336,16 @@
         "The Venetian Resort",
         "逛 Grand Canal Shoppes、室內運河與 St. Mark’s Square；午餐可安排在館內"
       ],
-      ["下午", "Bellagio Conservatory & Botanical Gardens", "參觀當季主題花園與飯店公共空間"],
-      ["傍晚", "Bellagio Fountains、Strip 夜景", "看噴泉表演、沿 Strip 散步並安排晚餐"],
+      [
+        "下午",
+        "Bellagio Conservatory & Botanical Gardens",
+        "參觀當季主題花園與飯店公共空間"
+      ],
+      [
+        "傍晚",
+        "Bellagio Fountains、Strip 夜景",
+        "看噴泉表演、沿 Strip 散步並安排晚餐"
+      ],
       ["晚上（待確認）", "ROUGE at The STRAT", "尚未購票，場次待確認"],
       ["夜間", "返回 Virgin Hotels", "結束 Las Vegas 市區行程"]
     ],
@@ -292,8 +365,16 @@
     "region": "LAS VEGAS → NEW YORK",
     "stay": "無，返程日",
     "events": [
-      ["上午", "Virgin Hotels 退房、收行李", "白天在 Las Vegas 自由活動；行李安排待確認"],
-      ["晚上、起飛前", "前往 LAS Terminal 3", "與 Jason 會合後前往機場；集合時間待確認"],
+      [
+        "上午",
+        "Virgin Hotels 退房、收行李",
+        "白天在 Las Vegas 自由活動；行李安排待確認"
+      ],
+      [
+        "晚上、起飛前",
+        "前往 LAS Terminal 3",
+        "與 Jason 會合後前往機場；集合時間待確認"
+      ],
       [
         "23:59（LAS）",
         "JetBlue Flight 948 起飛",

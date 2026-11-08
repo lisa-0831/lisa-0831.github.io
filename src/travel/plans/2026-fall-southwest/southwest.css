@@ -379,9 +379,19 @@
   font-size: 13px;
   line-height: 1.6;
 }
+.southwest .day-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 4px;
+}
 .southwest .lodging {
   display: inline-block;
-  margin: 2px 0 0;
+  flex: 0 0 auto;
+  max-width: 100%;
+  margin: 0;
   border-radius: 12px;
   background: #eeebf6;
   padding: 8px 12px;
@@ -389,25 +399,21 @@
   font-size: 13px;
   font-weight: 500;
 }
-.southwest .day-foot {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 14px;
-}
 .southwest .day button {
   flex: none;
+  margin-left: auto;
   height: 36px;
   border: 0;
   border-radius: 100px;
-  background: #eeebf6;
+  background: var(--ink);
   padding: 0 16px;
-  color: var(--ink);
+  color: #fff;
   font-size: 13px;
+  white-space: nowrap;
 }
-.southwest .day button:hover { background: #e4def8; }
-.southwest .day.selected button { background: var(--ink); color: #fff; }
+.southwest .day button:hover { background: #2c2e33; }
+.southwest .day.selected button { background: var(--purple); color: #fff; }
+.southwest .day.selected button:hover { background: #6444c4; }
 
 .southwest .panel {
   position: sticky;
@@ -557,6 +563,76 @@
 .southwest .sources b { color: var(--ink); font-weight: 500; }
 .southwest .sources a { color: var(--purple); }
 
+.southwest .meals { margin-top: 16px; }
+.southwest .meal-lead {
+  max-width: 62ch;
+  margin: -4px 0 8px !important;
+}
+.southwest .meal-day {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 16px 20px;
+  align-items: start;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.southwest .meal-day:first-child { border-top: 0; padding-top: 4px; }
+.southwest .meal-index {
+  border-radius: 14px;
+  background: var(--ink);
+  padding: 12px 8px 14px;
+  text-align: center;
+}
+.southwest .meal-index span {
+  display: block;
+  color: #b2b3ba;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+.southwest .meal-index b {
+  display: block;
+  margin-top: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.southwest .meal-index em {
+  display: block;
+  margin-top: 6px;
+  color: #b2b3ba;
+  font-size: 11px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+.southwest .meal-slots {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 18px;
+}
+.southwest .meal-slot span {
+  display: inline-block;
+  border-radius: 100px;
+  background: #eeebf6;
+  padding: 3px 9px;
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+.southwest .meal-slot b {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+.southwest .panel2 .meal-slot p {
+  margin: 4px 0 0 !important;
+  font-size: 13px !important;
+  line-height: 1.6;
+}
+
 .southwest .footer-line {
   display: flex;
   justify-content: space-between;
@@ -686,7 +762,6 @@
   .southwest .place-card { flex-basis: 86%; }
   .southwest .place-image { height: 280px; }
   .southwest .places-arrow { top: 119px; }
-  .southwest .day-foot { align-items: flex-start; flex-direction: column; }
 }
 @media (max-width: 760px) {
   .southwest .hero {
@@ -711,6 +786,9 @@
   .southwest .mapframe { height: 280px; }
   .southwest .footer-line { flex-wrap: wrap; }
   .southwest .day-index { text-align: left; padding-inline: 14px; }
+  .southwest .meal-day { grid-template-columns: 1fr; gap: 12px; }
+  .southwest .meal-slots { grid-template-columns: 1fr; }
+  .southwest .meal-index { text-align: left; padding-inline: 14px; }
 }
 @media print {
 
@@ -727,7 +805,8 @@
 .southwest .wrap { max-width: none; }
   .southwest .layout,
 .southwest .bottom { display: block; }
-  .southwest .day { break-inside: avoid; }
+  .southwest .day,
+  .southwest .meal-day { break-inside: avoid; }
 }
 @media (prefers-reduced-motion: reduce) {
 
