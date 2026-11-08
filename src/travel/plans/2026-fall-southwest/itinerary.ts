@@ -245,16 +245,16 @@ export const meals: DayMeals[] = [
       {
         label: "午餐",
         time: "約 11:30–12:15",
-        place: "Grand Canyon Village。候選 Canyon Village Market & Deli",
+        place: "Grand Canyon Village。候選 Canyon Adventures Bike Tours and Café",
       },
       {
         label: "晚餐",
         time: "約 18:00–19:15",
-        place: "Grand Canyon Village。候選 Canyon Village Market & Deli、Arizona Steakhouse",
+        place: "Grand Canyon Village。候選 Arizona Steakhouse",
       },
     ],
     note:
-      "用餐時確認大家是否外帶 11/22 早餐。Canyon Village Market 可採買；Deli 截至 11/8 官方公告關閉。Arizona Steakhouse 晚餐建議訂位。",
+      "晚餐時確認大家是否已準備 11/22 早餐。Arizona Steakhouse 晚餐建議訂位。",
   },
   {
     date: "11/22",
