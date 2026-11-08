@@ -5,6 +5,7 @@ import {
   days,
   embedLink,
   loopPoints,
+  meals,
   places,
   planText,
   routeLink,
@@ -446,9 +447,6 @@ export default function SouthwestTrip() {
                     <div className="day-info">
                       <h3>{tripDay.title}</h3>
                       <p className="region">{tripDay.region}</p>
-                      <p className="lodging">
-                        {tripDay.stay === "無，返程日" ? "返程日，無住宿" : `住 ${tripDay.stay}`}
-                      </p>
                     </div>
                   </div>
                   <ol className="timeline">
@@ -462,7 +460,10 @@ export default function SouthwestTrip() {
                       </li>
                     ))}
                   </ol>
-                  <div className="day-foot">
+                  <div className="day-meta">
+                    <p className="lodging">
+                      {tripDay.stay === "無，返程日" ? "返程日，無住宿" : `住 ${tripDay.stay}`}
+                    </p>
                     <button type="button" onClick={() => selectDay(index, true)}>
                       {index === chosen ? "正在看這天地圖" : "看這天的地圖"}
                     </button>
@@ -696,6 +697,35 @@ export default function SouthwestTrip() {
                 導覽禁止攜帶背包、腰包、補水背包、自拍棒與 GoPro；報到時需出示有照片的身分證件及訂位使用的信用卡。可攜帶水。
               </li>
             </ul>
+          </div>
+        </section>
+
+        <section className="meals" id="meals" aria-label="每日早午晚餐">
+          <div className="panel2">
+            <h2>每日早午晚餐</h2>
+            <p className="meal-lead">
+              依每天的行程整理用餐時間和地點。沒有寫明餐廳的，只標可以吃飯的時段與位置。
+            </p>
+            <div className="meal-list">
+              {meals.map((meal) => (
+                <article className="meal-day" key={meal.date}>
+                  <div className="meal-index">
+                    <span>DAY {meal.num}</span>
+                    <b>{meal.date}</b>
+                    <em>{meal.day}</em>
+                  </div>
+                  <div className="meal-slots">
+                    {meal.slots.map((slot) => (
+                      <div className="meal-slot" key={`${meal.date}-${slot.label}`}>
+                        <span>{slot.label}</span>
+                        <b>{slot.time}</b>
+                        <p>{slot.place}</p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
