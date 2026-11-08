@@ -76,7 +76,12 @@ function SchematicMap({ dayIndex }: { dayIndex: number }) {
               stroke={highlighted ? "#7351d7" : "#17191c"}
               strokeWidth="1.4"
             />
-            <text x={city.x} y={labelOffset(id, city.y)} textAnchor="middle" className="svgmap-label">
+            <text
+              x={city.x}
+              y={labelOffset(id, city.y)}
+              textAnchor="middle"
+              className="svgmap-label"
+            >
               {city.name}
             </text>
           </g>
@@ -163,7 +168,7 @@ function RouteCard() {
 }
 
 export default function SouthwestTrip() {
-  const [chosen, setChosen] = useState(2);
+  const [chosen, setChosen] = useState(0);
   const [mapMode, setMapMode] = useState<MapMode>("google");
   const [copyLabel, setCopyLabel] = useState("複製每日行程文字");
   const [canPrev, setCanPrev] = useState(false);
@@ -185,7 +190,10 @@ export default function SouthwestTrip() {
       for (const [key, value] of Object.entries(attributes)) link.setAttribute(key, value);
       document.head.appendChild(link);
     };
-    ensureLink("southwest-font-preconnect", { rel: "preconnect", href: "https://fonts.googleapis.com" });
+    ensureLink("southwest-font-preconnect", {
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com",
+    });
     ensureLink("southwest-font-gstatic", {
       rel: "preconnect",
       href: "https://fonts.gstatic.com",
@@ -268,13 +276,6 @@ export default function SouthwestTrip() {
     track.scrollBy({ left: direction * step, behavior: "smooth" });
   }
 
-  const segmentNoteTitle =
-    day.verified === "google"
-      ? "Google Maps 城市基準"
-      : day.verified === "reverse"
-        ? "Google Maps 反方向路段參考"
-        : "車程與景區注意事項";
-
   return (
     <div className="southwest">
       <nav className="site-bar page-pad" id="top" aria-label="頁面導覽">
@@ -315,8 +316,8 @@ export default function SouthwestTrip() {
         <div className="hero-note">
           <span>11/20 – 11/29</span>
           <p>
-            10 天 9 夜，從 Las Vegas 走到 Grand Canyon、Page、Bryce、Zion，再回到城市。11/22 中午是 Ken’s
-            Lower Antelope Canyon。
+            10 天 9 夜，從 Las Vegas 走到 Grand Canyon、Page、Bryce、Zion，再回到城市。11/22 中午是
+            Ken’s Lower Antelope Canyon。
           </p>
         </div>
       </header>
@@ -325,7 +326,11 @@ export default function SouthwestTrip() {
         <section className="loop-band" aria-label="這趟的環線">
           <div className="loop-copy">
             <p>Las Vegas，走到紅岩，再回到霓虹。</p>
-            <a className="hero-cta" href="#2026-fall-southwest" onClick={(event) => scrollToSection(event, "itinerary")}>
+            <a
+              className="hero-cta"
+              href="#2026-fall-southwest"
+              onClick={(event) => scrollToSection(event, "itinerary")}
+            >
               探索完整行程 <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -381,7 +386,9 @@ export default function SouthwestTrip() {
           <div>
             <h2>一次，把美國西南走成一圈。</h2>
           </div>
-          <p>自駕、峽谷、日落與城市夜景。下方保留每個時段、住宿地點和地圖導航，讓旅伴一眼掌握整趟旅行。</p>
+          <p>
+            自駕、峽谷、日落與城市夜景。下方保留每個時段、住宿地點和地圖導航，讓旅伴一眼掌握整趟旅行。
+          </p>
         </div>
 
         <section className="summary" aria-label="行程概要">
@@ -425,7 +432,11 @@ export default function SouthwestTrip() {
             </div>
             <div className="days">
               {days.map((tripDay, index) => (
-                <article className={`day${index === chosen ? " selected" : ""}`} id={`day-${index}`} key={tripDay.date}>
+                <article
+                  className={`day${index === chosen ? " selected" : ""}`}
+                  id={`day-${index}`}
+                  key={tripDay.date}
+                >
                   <div className="day-top">
                     <div className="day-index">
                       <span>DAY {tripDay.num}</span>
@@ -435,6 +446,9 @@ export default function SouthwestTrip() {
                     <div className="day-info">
                       <h3>{tripDay.title}</h3>
                       <p className="region">{tripDay.region}</p>
+                      <p className="lodging">
+                        {tripDay.stay === "無，返程日" ? "返程日，無住宿" : `住 ${tripDay.stay}`}
+                      </p>
                     </div>
                   </div>
                   <ol className="timeline">
@@ -448,10 +462,7 @@ export default function SouthwestTrip() {
                       </li>
                     ))}
                   </ol>
-                  <p className="lodging">住 {tripDay.stay}</p>
-                  {tripDay.nonDrive.length ? <p className="day-notes">{tripDay.nonDrive.join(" · ")}</p> : null}
                   <div className="day-foot">
-                    <p className="drive-note">{tripDay.reference}</p>
                     <button type="button" onClick={() => selectDay(index, true)}>
                       {index === chosen ? "正在看這天地圖" : "看這天的地圖"}
                     </button>
@@ -506,15 +517,12 @@ export default function SouthwestTrip() {
                 referrerPolicy="no-referrer-when-downgrade"
                 src={embeddedMap}
               />
-              <div className="schematic" role="img" aria-label="各地點地理位置示意圖；直線不代表道路">
+              <div
+                className="schematic"
+                role="img"
+                aria-label="各地點地理位置示意圖；直線不代表道路"
+              >
                 <SchematicMap dayIndex={chosen} />
-              </div>
-              <div className="overlay">
-                <b>如果瀏覽器無法嵌入 Google 地圖</b>
-                <span>可使用下方「在 Google Maps 看完整路線」，Google 將顯示最新的路線與開車時間。</span>
-                <a href={fullMap} target="_blank" rel="noopener">
-                  開啟 Google Maps
-                </a>
               </div>
             </div>
             <div className="maplinks">
@@ -529,8 +537,7 @@ export default function SouthwestTrip() {
               </a>
             </div>
             <div className="maphelp">
-              地圖中的路線為 Google Maps 自行規劃。嵌入地圖和外部 Google Maps
-              可能顯示不同當時路況；若內嵌地圖無法顯示，直接點擊路線連結。景區內接駁車路線不納入自駕。
+              地圖顯示當日自駕順序；接駁車與步道不在自駕路線內。車程會依當日路況變動。
             </div>
             <div className="segmenthead">
               <b>點對點車程（按當天順序）</b>
@@ -552,13 +559,6 @@ export default function SouthwestTrip() {
                   </div>
                 );
               })}
-              {day.verifiedLabel ? (
-                <p className="segment-note">
-                  <b>{segmentNoteTitle}</b>
-                  <br />
-                  {day.verifiedLabel}
-                </p>
-              ) : null}
             </div>
           </aside>
         </div>
@@ -597,7 +597,7 @@ export default function SouthwestTrip() {
                       Stargazer Tiny Home
                     </a>
                     <br />
-                    Grand Canyon Oasis，28272 N US-89, Flagstaff（不是 Tusayan）
+                    Grand Canyon Oasis，28272 N US-89, Flagstaff
                   </td>
                   <td>1</td>
                 </tr>
@@ -612,7 +612,7 @@ export default function SouthwestTrip() {
                       The Coyote Cottage
                     </a>
                     <br />
-                    Page 市區；門牌等 Airbnb 確認信
+                    Page, Arizona
                   </td>
                   <td>1</td>
                 </tr>
@@ -642,7 +642,7 @@ export default function SouthwestTrip() {
                       沙漠綠洲
                     </a>
                     <br />
-                    La Verkin, Utah，Confluence Park 旁；不是 Springdale
+                    La Verkin, Utah，Confluence Park 旁
                   </td>
                   <td>2</td>
                 </tr>
@@ -672,110 +672,28 @@ export default function SouthwestTrip() {
                 </tr>
               </tbody>
             </table>
-            <p style={{ fontSize: "11px", color: "var(--muted)" }}>
-              九晚都已訂。11/21 的房子在 Flagstaff 北的 US-89，不在 Tusayan；11/23 是 Ruby's Inn；11/24–25 在 La
-              Verkin，不在 Springdale。回程 JetBlue 11/29 23:59 LAS → JFK。Virgin Hotels 11/29
-              早上退房，晚上由 Jason 送機後再還車。
-            </p>
-            <h3 style={{ fontSize: "14px", margin: "18px 0 6px" }}>如果還想 Lake Powell Kayak / The Narrows</h3>
-            <p style={{ fontSize: "11.5px", color: "var(--muted)" }}>
-              11/23 上午只留 Wahweap Overlook，Horseshoe Bend、Glen Canyon Dam 與 Lake Powell Kayak
-              都不在當天時程。11/25 走的是 Riverside Walk，到 The Narrows 入口後原路返回，不是涉水進河。這兩項都
-              <b>沒有假設已預訂</b>。
-            </p>
           </div>
           <div className="panel2">
-            <h2>重要提醒與官方資料</h2>
+            <h2>行前準備</h2>
             <ul className="sources">
               <li>
-                <b>11/22 12:00 Ken’s Tours：</b>
-                <a href="https://lowerantelope.com/terms-of-service/" target="_blank" rel="noopener">
-                  Ken’s Tours 官方條款
-                </a>{" "}
-                要求至少提前 30 分鐘報到，故 <b>11:30 為最晚報到目標，建議 11:00 抵達</b>
-                ；實際集合點以訂單為準。大峽谷與 Page 均使用 Arizona MST，沒有時差；早上 06:00 從 Grand Canyon
-                Oasis（US-89）出發，沿公路北上 Page，不先回 Tusayan。
+                <b>保暖：</b>Grand Canyon、Bryce Canyon 與 Zion 早晚溫差大，11
+                月可能低於冰點。請準備分層衣物、保暖帽與手套。
               </li>
               <li>
-                <b>11/21 South Kaibab：</b>
-                <a href="https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm" target="_blank" rel="noopener">
-                  Kaibab Rim（Orange）Route
-                </a>{" "}
-                2026/9/12–11/30 營運，東行約 9 分鐘到 South Kaibab Trailhead，私人車不能停在登山口。日落參考{" "}
-                <a
-                  href="https://www.nps.gov/grca/planyourvisit/sunrise_set_moon.htm"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  約 17:16 MST
-                </a>
-                。Hopi Point 的 Red Route 改為 optional。
-                <a href="https://www.nps.gov/grca/planyourvisit/weather-condition.htm" target="_blank" rel="noopener">
-                  東線天候
-                </a>
-                只影響晚上回 US-89。
+                <b>鞋子：</b>
+                多段步道可能有砂地、碎石或結冰。請穿抓地力良好的健行鞋，並準備可套在鞋底的防滑裝備。
               </li>
               <li>
-                <b>11/23 Queen’s Garden：</b>
-                <a href="https://www.nps.gov/brca/planyourvisit/day-hikes.htm" target="_blank" rel="noopener">
-                  Queen’s Garden 1.8 miles
-                </a>{" "}
-                是目前可排的主方案。
-                <a href="https://www.nps.gov/brca/planyourvisit/conditions.htm" target="_blank" rel="noopener">
-                  Navajo Loop 兩側
-                </a>
-                在 2026/11 上旬因天候關閉至另行通知，組合環線先不當成可走。
-                <a href="https://www.nps.gov/brca/planyourvisit/winter.htm" target="_blank" rel="noopener">
-                  冬季規定
-                </a>
-                ：結冰就改走鋪面 Rim Trail。Page → Bryce 約 3–3.5h 是一般估計，不是即時 Google。
+                <b>飲水與食物：</b>每天出發前請帶足飲水、簡單午餐與行動糧。
               </li>
               <li>
-                <b>11/24–25 Zion：</b>
-                <a href="https://www.nps.gov/thingstodo/hike-canyon-overlook.htm" target="_blank" rel="noopener">
-                  Canyon Overlook
-                </a>{" "}
-                在過隧道之前；
-                <a href="https://www.nps.gov/thingstodo/hike-riverside-walk.htm" target="_blank" rel="noopener">
-                  Riverside Walk
-                </a>{" "}
-                要搭接駁到 Temple of Sinawava。
-                <a
-                  href="https://www.nps.gov/zion/planyourvisit/zion-canyon-shuttle-system.htm"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  10/25–11/28
-                </a>
-                ：Visitor Center 首班 07:00、最末班往峽谷 17:00，第 9 站最後離園 18:15，單程約 40–45
-                分鐘。這不是 The Narrows 涉水。
+                <b>隨身裝備：</b>
+                建議攜帶小型背包、頭燈、防曬用品、行動電源與可離線查看的行程。山區部分路段可能沒有訊號。
               </li>
               <li>
-                <b>11/27 Valley of Fire：</b>
-                <a href="https://parks.nv.gov/parks/valley-of-fire" target="_blank" rel="noopener">
-                  日出至日落
-                </a>
-                。Fire Wave／Seven Wonders 約 1.8 miles，White Domes 約 1.1 miles，兩個停車場，不是一條連續步道。5/15–9/30
-                例行封閉，11 月不在這段。
-                <a
-                  href="https://parks.nv.gov/news/temporary-closure-of-the-west-entrance-at-valley-of-fire"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  西入口
-                </a>{" "}
-                2026 年底前週一至週四關閉、週五至週日開放；11/27 是週五。
-              </li>
-              <li>
-                <b>Vegas 表演（兩場均暫定，尚未購票）：</b>
-                <a href="https://igovegas.com/shows/colin-cloud-mastermind" target="_blank" rel="noopener">
-                  Colin Cloud 場次資訊
-                </a>
-                、
-                <a href="https://thestrat.com/entertainment/featured/rouge" target="_blank" rel="noopener">
-                  The STRAT 的 ROUGE
-                </a>
-                ；兩場均未購票、具體時間以結帳頁為準。
+                <b>Ken’s Tours：</b>
+                導覽禁止攜帶背包、腰包、補水背包、自拍棒與 GoPro；報到時需出示有照片的身分證件及訂位使用的信用卡。可攜帶水。
               </li>
             </ul>
           </div>
@@ -787,10 +705,7 @@ export default function SouthwestTrip() {
           </span>
           <a href="#travel">BACK TO TRAVEL ↗</a>
         </div>
-        <p className="endnote">
-          更新日期：2026/11/07（五條健行已排入 11/21、11/23、11/24、11/25、11/27；車程仍是一般估計）。車程為一般路況估計，非針對實際出發時刻的
-          Google Maps 預測。Google Maps 每日／逐段導航連結會依最新道路情況重新計算。
-        </p>
+        <p className="endnote">更新日期：2026/11/07</p>
       </main>
     </div>
   );

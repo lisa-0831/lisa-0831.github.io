@@ -9,12 +9,8 @@ export type TripDay = {
   title: string;
   region: string;
   stay: string;
-  reference: string;
   events: TripEvent[];
   points: string[];
-  nonDrive: string[];
-  verified?: string;
-  verifiedLabel?: string;
 };
 
 export const days = rawDays as TripDay[];
@@ -55,17 +51,17 @@ export const places = [
   {
     src: "/travel/plans/2026-fall-southwest/photos/horseshoe.jpg",
     alt: "Horseshoe Bend，科羅拉多河在紅色岩壁間轉彎",
-    badge: "DAY 04",
+    badge: "DAY 03",
     title: "Horseshoe Bend",
-    caption: "Page · 已移出 11/23 上午",
+    caption: "Page · 11/22",
     region: "Arizona",
   },
   {
     src: "/travel/plans/2026-fall-southwest/photos/horseshoe-winter.jpg",
     alt: "冬天的 Horseshoe Bend 與科羅拉多河",
-    badge: "DAY 04",
+    badge: "DAY 03",
     title: "Horseshoe Bend",
-    caption: "Page · 已移出 11/23 上午",
+    caption: "Page · 11/22",
     region: "Arizona",
   },
   {
@@ -186,7 +182,10 @@ export function embedLink(points: string[]) {
 
 export function shortStop(value: string) {
   return value
-    .replace("Atwell Suites Henderson, 150 S Water St, Henderson, NV 89015", "Atwell Suites Henderson")
+    .replace(
+      "Atwell Suites Henderson, 150 S Water St, Henderson, NV 89015",
+      "Atwell Suites Henderson",
+    )
     .replace("Grand Canyon Visitor Center, Grand Canyon Village, AZ", "Grand Canyon Visitor Center")
     .replace("Grand Canyon Oasis, 28272 N US Highway 89, Flagstaff, AZ 86004", "Grand Canyon Oasis")
     .replace("Fire Wave Trailhead, Valley of Fire State Park, NV", "Fire Wave")
@@ -194,7 +193,10 @@ export function shortStop(value: string) {
     .replace("Canyon Overlook Trailhead, Zion National Park, UT", "Canyon Overlook")
     .replace("Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169", "Virgin Hotels")
     .replace("Harry Reid International Airport Terminal 3, Las Vegas, NV", "LAS Terminal 3")
-    .replace("Best Western Plus Ruby's Inn, 26 S Main St, Bryce Canyon City, UT 84764", "Ruby's Inn")
+    .replace(
+      "Best Western Plus Ruby's Inn, 26 S Main St, Bryce Canyon City, UT 84764",
+      "Ruby's Inn",
+    )
     .replace("Confluence Park, La Verkin, UT", "La Verkin")
     .replace(/,? (Grand Canyon National Park|Las Vegas|Springdale),? (AZ|NV|UT)/g, "")
     .replace(/, (Arizona|Utah|Nevada)/g, "")
@@ -216,7 +218,7 @@ export function planText(tripDays: TripDay[]) {
         day.events
           .map((event) => `- ${event[0]}：${event[1]}${event[2] ? `（${event[2]}）` : ""}`)
           .join("\n") +
-        `\n住宿：${day.stay}\n車程參考：${day.reference}`,
+        `\n住宿：${day.stay}`,
     )
     .join("\n\n");
 }
