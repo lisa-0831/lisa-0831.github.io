@@ -163,36 +163,36 @@ const southwestPlan = {
 
 const demoTrips: Record<string, { date: string; note: string }> = {
   CA: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
   NY: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
   MA: {
-    date: "Date to be added",
-    note: "Visited Boston. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "Boston. I’ll write the days in once I pin them down.",
   },
   GA: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
   NJ: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
   TN: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
   NC: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
   DC: {
-    date: "Date to be added",
-    note: "Visited. Personal travel dates and notes will be added later.",
+    date: "Dates still loose",
+    note: "I’ve been. I’ll write the days in once I pin them down.",
   },
 };
 
@@ -206,19 +206,19 @@ type DemoPhoto = {
 const demoPhotos: Record<string, DemoPhoto[]> = {
   CA: [
     {
-      caption: "Pacific coast / sample photo",
+      caption: "Pacific coast",
       credit: "Craig Melville",
       url: "/travel/states/CA/01.jpg",
       alt: "Rocky California mountain beside the Pacific Ocean",
     },
     {
-      caption: "Coastal road / sample photo",
+      caption: "Coastal road",
       credit: "Craig Melville",
       url: "/travel/states/CA/02.jpg",
       alt: "Brown cliffs beside the sea on the California coast",
     },
     {
-      caption: "Mountain lake / sample photo",
+      caption: "Mountain lake",
       credit: "Ganapathy Kumar",
       url: "/travel/states/CA/03.jpg",
       alt: "Gray and brown mountains beside a California lake",
@@ -226,19 +226,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   NY: [
     {
-      caption: "Brooklyn Bridge / sample photo",
+      caption: "Brooklyn Bridge",
       credit: "Patrick Tomasso",
       url: "/travel/states/NY/01.jpg",
       alt: "Manhattan skyline and Brooklyn Bridge over the East River",
     },
     {
-      caption: "A yellow cab / sample photo",
+      caption: "A yellow cab",
       credit: "Robert Bye",
       url: "/travel/states/NY/02.jpg",
       alt: "A yellow taxi driving between tall New York buildings",
     },
     {
-      caption: "Downtown light / sample photo",
+      caption: "Downtown light",
       credit: "Andrea Cau",
       url: "/travel/states/NY/03.jpg",
       alt: "A pathway between high-rise buildings in New York",
@@ -246,19 +246,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   MA: [
     {
-      caption: "Brick and green / sample photo",
+      caption: "Brick and green",
       credit: "Matt Collamer",
       url: "/travel/states/MA/01.jpg",
       alt: "A historic brick building surrounded by trees in Boston",
     },
     {
-      caption: "Beacon Hill / sample photo",
+      caption: "Beacon Hill",
       credit: "Amanda Murphy",
       url: "/travel/states/MA/02.jpg",
       alt: "A cobblestone Boston street lined with brick buildings",
     },
     {
-      caption: "A walk through Boston / sample photo",
+      caption: "A walk through Boston",
       credit: "Asael Peña",
       url: "/travel/states/MA/03.jpg",
       alt: "People walking through a tree-lined place in Boston",
@@ -266,19 +266,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   GA: [
     {
-      caption: "Savannah oaks / sample photo",
+      caption: "Savannah oaks",
       credit: "Ryan Arnst",
       url: "/travel/states/GA/01.jpg",
       alt: "A road passing beneath green trees in Savannah, Georgia",
     },
     {
-      caption: "Atlanta skyline / sample photo",
+      caption: "Atlanta skyline",
       credit: "Lance Asper",
       url: "/travel/states/GA/02.jpg",
       alt: "The Atlanta skyline during daytime",
     },
     {
-      caption: "Historic streets / sample photo",
+      caption: "Historic streets",
       credit: "Jonah Townsley",
       url: "/travel/states/GA/03.jpg",
       alt: "A Savannah street with moss-draped trees and historic buildings",
@@ -286,19 +286,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   TN: [
     {
-      caption: "Cumberland River / sample photo",
+      caption: "Cumberland River",
       credit: "King of Hearts",
       url: "/travel/states/TN/01.jpg",
       alt: "Nashville skyline reflected in the Cumberland River",
     },
     {
-      caption: "Smoky overlook / sample photo",
+      caption: "Smoky overlook",
       credit: "Shadowmeld Photography",
       url: "/travel/states/TN/02.jpg",
       alt: "Forested ridges of the Great Smoky Mountains under a cloudy sky",
     },
     {
-      caption: "Broadway / sample photo",
+      caption: "Broadway",
       credit: "Antony-22",
       url: "/travel/states/TN/03.jpg",
       alt: "People walking along Broadway in downtown Nashville",
@@ -306,19 +306,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   NC: [
     {
-      caption: "Biltmore / sample photo",
+      caption: "Biltmore",
       credit: "Blake Lewis",
       url: "/travel/states/NC/01.jpg",
       alt: "The Biltmore Estate and its lawn in Asheville, North Carolina",
     },
     {
-      caption: "Cape Hatteras / sample photo",
+      caption: "Cape Hatteras",
       credit: "Bohemian Baltimore",
       url: "/travel/states/NC/02.jpg",
       alt: "The black and white spiral of the Cape Hatteras Lighthouse",
     },
     {
-      caption: "Blue Ridge road / sample photo",
+      caption: "Blue Ridge road",
       credit: "Maria newengland",
       url: "/travel/states/NC/03.jpg",
       alt: "A stone tunnel on the Blue Ridge Parkway in North Carolina",
@@ -326,19 +326,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   DC: [
     {
-      caption: "Reflecting Pool / sample photo",
+      caption: "Reflecting Pool",
       credit: "Ali Khan",
       url: "/travel/states/DC/01.jpg",
       alt: "The Washington Monument reflected in the Lincoln Memorial Reflecting Pool",
     },
     {
-      caption: "Cherry blossoms / sample photo",
+      caption: "Cherry blossoms",
       credit: "Kurt Kaiser",
       url: "/travel/states/DC/02.jpg",
       alt: "Cherry blossoms in front of the Washington Monument",
     },
     {
-      caption: "The Capitol / sample photo",
+      caption: "The Capitol",
       credit: "Martin Falbisoner",
       url: "/travel/states/DC/03.jpg",
       alt: "The west front of the United States Capitol",
@@ -346,19 +346,19 @@ const demoPhotos: Record<string, DemoPhoto[]> = {
   ],
   NJ: [
     {
-      caption: "Cape May light / sample photo",
+      caption: "Cape May light",
       credit: "King of Hearts",
       url: "/travel/states/NJ/01.jpg",
       alt: "Cape May Lighthouse at sunset behind beach grass",
     },
     {
-      caption: "Asbury Park / sample photo",
+      caption: "Asbury Park",
       credit: "Acroterion",
       url: "/travel/states/NJ/02.jpg",
       alt: "The brick Paramount Theatre and Convention Hall in Asbury Park",
     },
     {
-      caption: "Across the river / sample photo",
+      caption: "Across the river",
       credit: "King of Hearts",
       url: "/travel/states/NJ/03.jpg",
       alt: "The Manhattan skyline at dusk seen from the Jersey City waterfront",
@@ -396,10 +396,10 @@ function TravelScreen() {
           </h1>
         </div>
         <div className="demo-notice">
-          <span>TRAVEL RECORD SETUP</span>
+          <span>THE MAP SO FAR</span>
           <p>
-            Visited states reflect the current travel list. Dates and personal stories can be added
-            later; gallery images are temporary samples.
+            Darker purple is where I’ve been. I’m still writing the dates and notes in, and the
+            photos below are borrowed until mine are ready.
           </p>
         </div>
       </header>
@@ -426,7 +426,7 @@ function TravelScreen() {
               {stateTiles.map(([code, name, row, column]) => {
                 const visited = Boolean(demoTrips[code]);
                 const planned = plannedStates.has(code);
-                const status = visited ? "visited in demo data" : planned ? "planned" : "not visited";
+                const status = visited ? "visited" : planned ? "planned" : "not visited";
                 return (
                   <button
                     className={`state-tile ${visited ? "is-visited" : ""} ${planned ? "is-planned" : ""} ${
@@ -480,30 +480,26 @@ function TravelScreen() {
               </>
             ) : (
               <p className="trip-note">
-                No sample trip is recorded for this state yet. Select a darker purple state to see a
-                demo travel date and note.
+                I haven’t been here yet. Pick a darker purple state to see a date and a note from a
+                trip I did take.
               </p>
             )}
             <div className="sample-tag">
-              {trip
-                ? "PERSONAL DATE & NOTE TO BE ADDED"
-                : planned
-                  ? "PLANNED ITINERARY"
-                  : "NO VISIT RECORDED"}
+              {trip ? "STILL WRITING" : planned ? "COMING UP" : "NOT YET"}
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="travel-gallery page-pad" aria-label="Sample travel photo gallery">
+      <section className="travel-gallery page-pad" aria-label="Travel photos">
         <div className="gallery-heading">
-          <span>{selectedState[1]} / PHOTO NOTES / DEMO</span>
+          <span>{selectedState[1]} / FROM THE ROAD</span>
           <p>
             {selectedPhotos.length
-              ? `Sample imagery for ${selectedState[1]}—personal travel photos can replace these later.`
+              ? `Photos of ${selectedState[1]}, for now. Mine will replace these. The film’s still at the lab.`
               : planned
-                ? `No photos for ${selectedState[1]} yet. The planned itinerary is linked in the panel above.`
-                : `No sample photos for ${selectedState[1]} yet.`}
+                ? `No photos of ${selectedState[1]} yet. The plan is linked in the panel above.`
+                : `Nothing from ${selectedState[1]} yet.`}
           </p>
         </div>
         {selectedPhotos.length ? (
@@ -531,10 +527,10 @@ function TravelScreen() {
               <h2>No photos here yet.</h2>
               <p>
                 {planned
-                  ? `Photos for ${selectedState[1]} can be added after the trip.`
+                  ? `I’ll add photos of ${selectedState[1]} after the trip.`
                   : trip
-                    ? `Personal travel photos for ${selectedState[1]} can be added later.`
-                    : "This state is not marked as visited. Choose a dark purple state to preview its sample photo set."}
+                    ? `My photos of ${selectedState[1]} aren’t in yet.`
+                    : "I haven’t been here. Darker purple states are the ones with a note, and a few borrowed photos for now."}
               </p>
             </div>
           </div>
@@ -544,7 +540,7 @@ function TravelScreen() {
       <section className="travel-footnote page-pad">
         <span>50 States + D.C.</span>
         <p>
-          A lighter corner of the portfolio—built to hold dates, memories, and the places still
+          A lighter corner of the portfolio, built to hold dates, memories, and the places still
           ahead.
         </p>
       </section>
