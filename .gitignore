@@ -11,7 +11,12 @@ logs/
 *.log
 .claude-replay.*
 .tmp-*
+.mise.toml
+
 /.figma/design-context/
+.figma/README.md
+.figma/make/*
+!.figma/make/site.json
 
 # Platform-managed agentplat state, not project source. In the
 # client-initiated single-repo workspace layout (make's `Path: "."` spec) the
@@ -19,3 +24,9 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+
+AGENTS.md
+CLAUDE.md
+
+.gitattributes
+public/.gitattributes

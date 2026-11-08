@@ -68,7 +68,11 @@
         "Mather Point → Rim Trail → Yavapai Point 看夕陽",
         "沿鋪面 Rim Trail 步行 0.7 mile（1.1 km），約 20–30 分鐘；日落約 17:16 MST"
       ],
-      ["17:20–約 18:00", "搭 Orange Route 返回 Visitor Center", "從 Yavapai Point 搭接駁車回停車處"],
+      [
+        "17:20–約 18:00",
+        "搭 Orange Route 返回 Visitor Center",
+        "從 Yavapai Point 搭接駁車回停車處"
+      ],
       [
         "約 18:00–19:15",
         "Grand Canyon Village 晚餐",
@@ -100,21 +104,13 @@
     "region": "GRAND CANYON → PAGE",
     "stay": "The Coyote Cottage, Page",
     "events": [
+      ["06:30–07:00", "Oasis 早餐", "在 Grand Canyon Oasis 吃完再出發"],
       [
-        "05:30–06:00",
-        "Airbnb 早餐",
-        "前晚若已外帶早餐，就在 Grand Canyon Oasis 吃完再出發"
-      ],
-      [
-        "06:00（Arizona MST）",
+        "07:00（Arizona MST）",
         "從 Grand Canyon Oasis 出發",
-        "若尚未準備早餐，沿 US-89 約 23 分鐘後在 Burger King 購買；之後前往 Page"
+        "沿 US-89 前往 Page"
       ],
-      [
-        "約 09:30–10:30",
-        "抵達 Page、休息",
-        "Grand Canyon 與 Page 使用相同時區"
-      ],
+      ["約 10:30–11:30", "抵達 Page、休息", "和 Grand Canyon 同一時區"],
       [
         "11:00–11:30",
         "抵達 Ken’s Tours、完成 Check-in",
@@ -231,29 +227,25 @@
     "region": "LA VERKIN ↔ ZION",
     "stay": "沙漠綠洲，La Verkin",
     "events": [
-      ["06:15", "從沙漠綠洲出發", "在 Airbnb 吃完早餐再出發，車程約 30 分鐘"],
-      ["06:45–07:15", "抵達 Zion Canyon Visitor Center", "停車並前往接駁車站"],
+      ["07:00", "從沙漠綠洲出發", "吃完早餐再走，車程約 30 分鐘"],
+      ["07:30–08:00", "抵達 Zion Canyon Visitor Center", "停車並前往接駁車站"],
       [
-        "07:15–08:15",
+        "08:00–09:00",
         "搭接駁車到 Temple of Sinawava",
-        "第 9 站；單程約 40–45 分鐘，時間包含候車"
+        "第 9 站，單程約 40–45 分鐘"
       ],
       [
-        "08:15–09:45",
+        "09:00–11:00",
         "Riverside Walk 往返",
-        "約 2.2 miles（3.5 km），鋪面步道；走到 The Narrows 入口後原路返回"
+        "約 2.2 miles（3.5 km），鋪面步道，走到 The Narrows 入口後折返"
       ],
-      ["09:45–11:00", "搭接駁車返回 Visitor Center", "候車與回程時間約 1 小時"],
-      [
-        "11:00–16:00",
-        "Zion 午餐與午後活動",
-        "依當日步道狀況與體力安排 Pa'rus Trail 或 Emerald Pools"
-      ],
-      ["16:15", "返回 La Verkin", "傍晚回到沙漠綠洲休息"],
+      ["11:00–12:15", "搭接駁車返回 Visitor Center", "回程含候車約 1 小時"],
+      ["12:15–17:00", "午餐與午後活動", "Pa'rus Trail 或 Emerald Pools"],
+      ["17:00", "返回 La Verkin", "回到沙漠綠洲休息"],
       [
         "天候備案",
         "Pa'rus Trail",
-        "若峽谷步道關閉，改走 Visitor Center 附近步道"
+        "峽谷步道關閉時，改走 Visitor Center 附近步道"
       ]
     ],
     "points": [
@@ -271,7 +263,11 @@
     "stay": "Virgin Hotels Las Vegas",
     "events": [
       ["08:30–09:30", "Airbnb 早餐", "在沙漠綠洲吃完早餐、整理行李"],
-      ["09:30–10:00", "退房、離開 La Verkin", "沿 I-15 往 St. George／Las Vegas 方向行駛"],
+      [
+        "09:30–10:00",
+        "退房、離開 La Verkin",
+        "沿 I-15 往 St. George／Las Vegas 方向行駛"
+      ],
       [
         "中午",
         "La Verkin／Hurricane／St. George 午餐",
@@ -287,9 +283,13 @@
         "前往 Las Vegas",
         "純車程約 2.5 小時；進入 Nevada 後時鐘調慢 1 小時"
       ],
-      ["下午至傍晚", "Virgin Hotels Check-in、休息", "抵達時間依 St. George 是否停留而定"],
-      ["傍晚", "Las Vegas 感恩節晚餐", "餐廳與時間待確認"],
-      ["晚上（待確認）", "Colin Cloud: Mastermind", "尚未購票，場次待確認"]
+      [
+        "16:00 前抵達",
+        "Virgin Hotels Check-in、休息",
+        "抵達時間依 St. George 停留多久而定"
+      ],
+      ["傍晚", "Las Vegas 感恩節晚餐", ""],
+      ["20:30-22:00", "ROUGE at The STRAT", ""]
     ],
     "points": [
       "Confluence Park, La Verkin, UT",
@@ -305,38 +305,24 @@
     "stay": "Virgin Hotels Las Vegas",
     "events": [
       [
-        "07:00（Nevada PST）",
+        "08:00（Nevada PST）",
         "從 Virgin Hotels 出發",
-        "前往 Valley of Fire，單程車程約 1–1.25 小時"
+        "前往 Valley of Fire，車程約 1–1.25 小時"
       ],
+      ["約 09:15–09:45", "抵達 Valley of Fire", "前往 Fire Wave Trailhead"],
       [
-        "約 08:00–08:30",
-        "抵達 Valley of Fire",
-        "進入園區後前往 Fire Wave Trailhead"
-      ],
-      [
-        "08:30–10:30",
+        "09:45–11:45",
         "Fire Wave + Seven Wonders Loop",
-        "約 1.8 miles（2.9 km），預留 2 小時；沙地行走較費力"
+        "約 1.8 miles（2.9 km），沙地步道"
       ],
+      ["12:00–13:00", "午餐、休息", "Las Vegas 先買好，在園區吃"],
+      ["13:00–15:30", "Visitor Center、Atlatl Rock、Elephant Rock", "沿途觀景"],
       [
-        "10:30–10:45",
-        "前往 White Domes Trailhead",
-        "兩段步道從不同停車場出發，中間搭車移動"
-      ],
-      [
-        "10:45–12:00",
+        "16:00–17:30",
         "White Domes Loop",
-        "約 1.1 miles（1.8 km），預留約 1 小時 15 分；途中有一段窄縫峽谷"
+        "約 1.1 miles（1.8 km）。日落約 16:24，看完日落後走完步道"
       ],
-      ["12:00–13:00", "午餐、休息", "午餐已在 Las Vegas 買好；在園區野餐區或車上用餐"],
-      [
-        "13:00–15:00",
-        "Visitor Center、Atlatl Rock、Elephant Rock",
-        "依當日時間與體力安排沿途觀景點"
-      ],
-      ["15:00–15:30", "離開園區、返回 Virgin Hotels", "日落約 16:24 PST"],
-      ["晚上", "Las Vegas 自由活動", "返回飯店休息"]
+      ["之後", "返回 Virgin Hotels", "晚上自由活動"]
     ],
     "points": [
       "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
@@ -367,9 +353,13 @@
       [
         "傍晚",
         "Bellagio Fountains、Strip 夜景",
-        "看噴泉表演、沿 Strip 散步並安排晚餐"
+        "看噴泉表演、沿 Strip 散步並安排晚餐。Bellagio Fountains 中午 12:00 至晚上 7:30，每 30 分鐘一場；晚上 8:00 至午夜 12:00，每 15 分鐘一場。"
       ],
-      ["晚上（待確認）", "ROUGE at The STRAT", "尚未購票，場次待確認"],
+      [
+        "18:30 or 21:00",
+        "O by Cirque du Soleil",
+        "尚未購票，場次待確認。演出時間為 90 分鐘，不設中場休息。"
+      ],
       ["夜間", "返回 Virgin Hotels", "結束 Las Vegas 市區行程"]
     ],
     "points": [

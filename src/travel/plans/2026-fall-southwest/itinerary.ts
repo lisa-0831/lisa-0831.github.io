@@ -263,8 +263,8 @@ export const meals: DayMeals[] = [
     slots: [
       {
         label: "早餐",
-        time: "05:30–06:00／出發後",
-        place: "前晚已買就在 Airbnb 吃；未買則在 US-89 約 23 分鐘外的 Burger King 購買",
+        time: "06:30–07:00",
+        place: "Grand Canyon Oasis，吃完再出發",
       },
       { label: "午餐", time: "14:00–15:00", place: "Page。導覽結束後" },
       { label: "晚餐", time: "傍晚", place: "Page" },
@@ -301,8 +301,8 @@ export const meals: DayMeals[] = [
     day: "WED",
     num: "06",
     slots: [
-      { label: "早餐", time: "06:15 出發前", place: "Airbnb 吃完再出發" },
-      { label: "午餐", time: "11:00 之後", place: "Zion National Park 內" },
+      { label: "早餐", time: "07:00 出發前", place: "沙漠綠洲，吃完再出發" },
+      { label: "午餐", time: "12:15 之後", place: "Zion National Park 內" },
       { label: "晚餐", time: "返回後", place: "Springdale／La Verkin／Hurricane" },
     ],
   },
@@ -313,7 +313,7 @@ export const meals: DayMeals[] = [
     slots: [
       { label: "早餐", time: "08:30–09:30", place: "La Verkin Airbnb 內吃完再出發" },
       { label: "午餐", time: "中午", place: "La Verkin／Hurricane／St. George" },
-      { label: "晚餐", time: "抵達後", place: "Las Vegas 感恩節晚餐；餐廳與時間待確認" },
+      { label: "晚餐", time: "傍晚", place: "Las Vegas 感恩節晚餐" },
     ],
     note:
       "視體力於 St. George 擇一短停：Snow Canyon State Park、園內 Jenny’s Canyon Trail（0.5 mile／0.8 km，約 20 分鐘），或 Red Hills Desert Garden。",
@@ -323,11 +323,11 @@ export const meals: DayMeals[] = [
     day: "FRI",
     num: "08",
     slots: [
-      { label: "早餐", time: "07:00 出發前", place: "Las Vegas" },
+      { label: "早餐", time: "08:00 出發前", place: "Las Vegas" },
       {
         label: "午餐",
-        time: "出發前買好",
-        place: "在 Las Vegas 購買，12:00–13:00 於 Valley of Fire 用餐",
+        time: "12:00–13:00",
+        place: "Valley of Fire。Las Vegas 先買好",
       },
       { label: "晚餐", time: "晚上", place: "Las Vegas" },
     ],
