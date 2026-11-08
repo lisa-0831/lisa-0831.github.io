@@ -794,6 +794,7 @@ export default function App() {
             </p>
             <div className="earlier">
               <span className="project-kicker">EARLIER CHAPTERS</span>
+              <p>Business Promotions and Business Intelligence Analyst at ASE Group · May–Aug 2021</p>
               <p>Product internship at Sohu · Apr–Aug 2018</p>
               <p>
                 Research assistant at Chung-Hua Institution for Economic Research · Jul–Aug 2019
