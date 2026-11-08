@@ -234,14 +234,14 @@ export const meals: DayMeals[] = [
       { label: "午餐", time: "出發前", place: "紐約。行程沒有另排" },
       { label: "晚餐", time: "19:50 前", place: "JFK Terminal 5，或機上。22:45 到了就去飯店休息" },
     ],
-    note: "出發前跟 Jason 確認 11/21 早餐由誰準備；隔天帶上車吃。",
+    note: "出發前一天跟 Jason 確認；由 Jason 先買好 11/21 早餐，隔天帶上車吃。",
   },
   {
     date: "11/21",
     day: "SAT",
     num: "02",
     slots: [
-      { label: "早餐", time: "06:00 出發後", place: "前一晚準備好，車上吃" },
+      { label: "早餐", time: "06:00 出發後", place: "Jason 前一晚買好，帶上車吃" },
       {
         label: "午餐",
         time: "約 11:30–12:15",
