@@ -178,6 +178,7 @@
       "Page, AZ",
       "Wahweap Overlook, Page, AZ",
       "Sunrise Point, Bryce Canyon National Park, UT",
+      "Inspiration Point, Bryce Canyon National Park, UT",
       "Best Western Plus Ruby's Inn, 26 S Main St, Bryce Canyon City, UT 84764"
     ]
   },
@@ -288,11 +289,13 @@
         "Virgin Hotels Check-in、休息",
         "抵達時間依 St. George 停留多久而定"
       ],
-      ["傍晚", "Las Vegas 感恩節晚餐", ""],
+      ["傍晚", "Las Vegas 感恩節晚餐", "LAS VEGAS 六人"],
       ["20:30-22:00", "ROUGE at The STRAT", ""]
     ],
     "points": [
       "Confluence Park, La Verkin, UT",
+      "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
+      "The STRAT Hotel Casino, Las Vegas, NV",
       "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169"
     ]
   },
@@ -322,13 +325,22 @@
         "White Domes Loop",
         "約 1.1 miles（1.8 km）。日落約 16:24，看完日落後走完步道"
       ],
-      ["之後", "返回 Virgin Hotels", "晚上自由活動"]
+      ["18:30 抵達市區", "晚餐", "LAS VEGAS 六人"],
+      ["晚餐後", "自由活動時間", "候選：Fremont"],
+      [
+        "21:00-22:30",
+        "Gino & Irene 看 O by Cirque du Soleil",
+        "O Theatre, Bellagio"
+      ]
     ],
     "points": [
       "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
       "Fire Wave Trailhead, Valley of Fire State Park, NV",
-      "White Domes Trailhead, Valley of Fire State Park, NV",
+      "Valley of Fire State Park Visitor Center, 29450 Valley of Fire Rd, Overton, NV 89040",
       "Atlatl Rock, Valley of Fire State Park, NV",
+      "Elephant Rock, Valley of Fire State Park, NV",
+      "White Domes Trailhead, Valley of Fire State Park, NV",
+      "Bellagio, 3600 S Las Vegas Blvd, Las Vegas, NV 89109",
       "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169"
     ]
   },
@@ -336,7 +348,7 @@
     "date": "11/28",
     "day": "SAT",
     "num": "09",
-    "title": "Las Vegas｜Venetian、Bellagio、ROUGE",
+    "title": "Las Vegas｜Venetian、Bellagio、Paranormal",
     "region": "VIRGIN HOTELS ↔ STRIP",
     "stay": "Virgin Hotels Las Vegas",
     "events": [
@@ -345,28 +357,30 @@
         "The Venetian Resort",
         "逛 Grand Canal Shoppes、室內運河與 St. Mark’s Square；午餐可安排在館內"
       ],
+      ["中午", "午餐", "LAS VEGAS 五人"],
       [
         "下午",
         "Bellagio Conservatory & Botanical Gardens",
         "參觀當季主題花園與飯店公共空間"
       ],
       [
+        "16:00–17:15",
+        "Gino 看 Paranormal Mind Reading Magic",
+        "Horseshoe Las Vegas，Laugh Factory"
+      ],
+      [
         "傍晚",
         "Bellagio Fountains、Strip 夜景",
         "看噴泉表演、沿 Strip 散步並安排晚餐。Bellagio Fountains 中午 12:00 至晚上 7:30，每 30 分鐘一場；晚上 8:00 至午夜 12:00，每 15 分鐘一場。"
       ],
-      [
-        "18:30 or 21:00",
-        "O by Cirque du Soleil",
-        "尚未購票，場次待確認。演出時間為 90 分鐘，不設中場休息。"
-      ],
+      ["傍晚", "晚餐", "LAS VEGAS 五人"],
       ["夜間", "返回 Virgin Hotels", "結束 Las Vegas 市區行程"]
     ],
     "points": [
       "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169",
       "The Venetian Resort Las Vegas, Las Vegas, NV",
       "Bellagio Conservatory & Botanical Gardens, Las Vegas, NV",
-      "The STRAT Hotel Casino, Las Vegas, NV",
+      "Horseshoe Las Vegas, 3645 S Las Vegas Blvd, Las Vegas, NV 89109",
       "Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169"
     ]
   },
@@ -383,6 +397,8 @@
         "Virgin Hotels 退房、收行李",
         "白天在 Las Vegas 自由活動；行李安排待確認"
       ],
+      ["中午", "午餐", "LAS VEGAS 五人"],
+      ["傍晚", "晚餐", "LAS VEGAS 五人"],
       [
         "晚上、起飛前",
         "前往 LAS Terminal 3",

@@ -190,6 +190,16 @@ export function shortStop(value: string) {
     .replace("Grand Canyon Oasis, 28272 N US Highway 89, Flagstaff, AZ 86004", "Grand Canyon Oasis")
     .replace("Fire Wave Trailhead, Valley of Fire State Park, NV", "Fire Wave")
     .replace("White Domes Trailhead, Valley of Fire State Park, NV", "White Domes")
+    .replace(
+      "Valley of Fire State Park Visitor Center, 29450 Valley of Fire Rd, Overton, NV 89040",
+      "Valley of Fire Visitor Center",
+    )
+    .replace("Atlatl Rock, Valley of Fire State Park, NV", "Atlatl Rock")
+    .replace("Elephant Rock, Valley of Fire State Park, NV", "Elephant Rock")
+    .replace("Bellagio, 3600 S Las Vegas Blvd, Las Vegas, NV 89109", "Bellagio")
+    .replace("Horseshoe Las Vegas, 3645 S Las Vegas Blvd, Las Vegas, NV 89109", "Horseshoe")
+    .replace("Sunrise Point, Bryce Canyon National Park, UT", "Sunrise Point")
+    .replace("Inspiration Point, Bryce Canyon National Park, UT", "Inspiration Point")
     .replace("Canyon Overlook Trailhead, Zion National Park, UT", "Canyon Overlook")
     .replace("Virgin Hotels Las Vegas, 4455 Paradise Rd, Las Vegas, NV 89169", "Virgin Hotels")
     .replace("Harry Reid International Airport Terminal 3, Las Vegas, NV", "LAS Terminal 3")
